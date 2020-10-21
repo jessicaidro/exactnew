@@ -1,26 +1,22 @@
 <?php
-	include_once "../util/z_top.php";
-	include_once "../BO/cadastroalunoBO.php";
-
-
+	include_once "../menu_lateral.php";
 ?>
-	<div class="contentInfos">
-		<div class="container">
-			<br>
-			<br>
+
 				<div class="row">
-					<div class="col-sm">
-						<form method="POST" action="../Forms/formcategoria.php">
-							<h3>Categoria</h3>
-							<hr />
-							<b>Nome da Categoria*:</b>
-							<input type="text" name="txtCategoria" id="txtCategoria" class="form-control" placeholder="Insira o nome da Categoria" required autofocus/><br>
-							<center><input type="submit" class="btn btn-outline-warning" value="Cadastrar" name="acao"></center>
+					<div class="col s12 m6 push-m3">
+					<h3>CADASTRO DE CATEGORIA</h3>
+						<form action="../Forms/formcategoria.php" id="formCategoria" method="POST">
+							<div class="input-field col s12">
+								
+								<input type="text" name="txtCategoria" id="txtCategoria" maxlength="50" placeholder="Insira o nome da Categoria" autofocus/>
+								<label for="txtCategoria">Nome Categoria</label>
+							</div>
+
+							<div class="input-field col s12">
+								<button name="acao" value="cadastrarCategoria" class="btn" type="submit">CADASTRAR CATEGORIA</button>
+							</div>
 						</form>
+
 					</div>
 				</div>
-		</div>
-	</div>
-<?php
-	include_once "../util/z_footer.php";
-?>
+		

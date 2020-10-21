@@ -1,30 +1,19 @@
 <?php 
+include_once "../DAO/categoriaDAO.php";
 
-include '../DAO/categoriaDAO.php';
-
-function CategoriaBO($NomeCategoria)
-{
-	
-	
-	$NomeCategoria = CategoriaDAO($NomeCategoria);
-	if(is_numeric($NomeCategoria) && $NomeCategoria !== 0) {
-		return true;
-	} else {
-		return 0;
-	}
+function cadastrarCategoriaBO($nomeCategoria) {
+	return cadastrarCategoriaDAO($nomeCategoria);
 }
 
-function consultarCategoriaBO($NomeCategoria)
-{
-	$NomeCategoria = ConsultaCategoriaBO($NomeCategoria);
-	if (is_numeric($NomeCategoria) && $NomeCategoria !==0) {
-		return $NomeCategoria;
-	} else {
-		return false;
-	}
+function buscarCategoriaBO ($nomeCategoria) {
+	return  buscarCategoriaDAO ($nomeCategoria);
 }
 
+function deletarCategoriaBO($id_categoria){
+	return deletarCategoriaDAO($id_categoria);
+}
+
+function editarCategoriaBO($id_categoria, $nomeCategoria){
+	return editarCategoriaDAO($id_categoria, $nomeCategoria);
+}
 ?>
-
-
-

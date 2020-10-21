@@ -18,7 +18,7 @@
 	<div class="container">
 		
 		<div class="row">
-			<div class="col s6 m6">
+			<div class="col s12 m6">
 			<form method="POST" action="../Forms/formaluno.php" class="cadastro">
 				<input type="hidden" name="acao" value="<?= $action ?>">
 				<input type="hidden" value="<?=$id_aluno?>" name="id_aluno"/>
@@ -27,7 +27,6 @@
 				<input type="hidden" name="acao" value="cadastrarAluno">
 				
 				<h4>Aluno | <small> Realize seu cadastro!</small></h4>
-				<hr />
 				
 				<label for="first_name">Nome</label>
 				<input type="text" name="txtNome" id="txtNome" class="form-control" placeholder="Insira seu Nome aqui " value="<?=$nome?>"required autofocus/>
@@ -60,28 +59,9 @@
 					<input type="text" name="txtAno" id="txtAno" class="form-control" placeholder="Insira o Ano" value="<?=$ano?>" required autofocus/>			
 				</div>
 				<input type="hidden" name="tipo" value="aluno" />
-				<input type="submit" class="btn btn-outline-warning" value="Cadastrar" id="btn-cadastroAluno" name="cadastrar">
+				<input type="submit" class="btn" value="Cadastrar" id="btn-cadastroAluno" name="cadastrar">
 			</form>
 			</div>
-
-		<div class="col s6 m6">
-			<h4> Já é cadastrado? <small> Realize seu login aqui!</small></h4>
-			<hr>
-			<div class="input-group">
-      <div class="input-group-prepend">
-         		 
-        		</div>
-        		
-        		<div class="invalid-feedback">
-          			Please choose a username.
-        		</div>
-        	</div>
-			<input type="text" name="txtLogin" id="txtLogin" class="form-control" placeholder="Insira seu Usuario" required autofocus>
-			
-			<input type="password" name="txtSenha" id="txtSenha" class="form-control" placeholder="Insira sua Senha" required autofocus>
-		
-			<input type="submit" class="btn btn-outline-warning" value="Login" id="Login" name="LOGIN">
-		</div>
 	</div>
 </div>
 <?php
