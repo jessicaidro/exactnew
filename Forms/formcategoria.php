@@ -15,6 +15,30 @@
 	}
 }
 
+	if(isset($_POST['txtCategoria']) && isset($_GET['txtEditar'])){
+		$nomeCategoria = $_POST["txtCategoria"];
+
+		editarCategoriaBO($id_categoria, $nomeCategoria);
+
+		echo "<script> window.location.href='../paginas/cadastrocategoria.php'</script> ";
+	} else {
+		echo "Os campos devem ser preenchidos <br>";
+		echo "<br> <a href='../paginas/cadastrocategoria.php'> Voltar</a>";
+	}
+
+	if(isset($_GET['txtDeletar'])) {
+		if(!empty($_GET['txtDeletar'])) {
+			$id_categoria = $_GET['txtDeletar'];
+
+			deletarCategoriaBO($id_categoria);
+
+			echo "<script>
+				window.location.href=\"../paginas/cadastrocategoria.php\" </script>";
+		} else {
+			echo "Os campos devem ser preenchidos <br>";
+			echo "<br> <a href='../paginas/cadastrocategoria.php'> Voltar</a>";
+		}
+	}
 ?>
 
 

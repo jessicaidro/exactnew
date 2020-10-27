@@ -5,8 +5,8 @@ function cadastrarCategoriaBO($nomeCategoria) {
 	return cadastrarCategoriaDAO($nomeCategoria);
 }
 
-function buscarCategoriaBO ($nomeCategoria) {
-	return  buscarCategoriaDAO ($nomeCategoria);
+function buscarCategoriaBO () {
+	return  buscarCategoriaDAO ();
 }
 
 function deletarCategoriaBO($id_categoria){

@@ -25,11 +25,11 @@ function cadastrarCategoriaDAO ($nomeCategoria) {
 	}
 }
 
-function buscarCategoriaDAO ($nomeCategoria) {
+function buscarCategoriaDAO () {
 	$conn = conectar();
 
 	try{
-		$buscarCategoria = "SELECT NomeCategoria from categoria";
+		$buscarCategoria = "SELECT id_categoria, nomeCategoria FROM categoria";
 		return $conn->query($buscarCategoria);
 
 	} catch(Exception $e) {
@@ -41,7 +41,7 @@ function deletarCategoriaDAO($id_categoria) {
 	$conn = conectar();
 
 	try {
-		$sql = "DELETE from categoria where id_categoria = ".$id_categoria;
+		$sql = "DELETE from categoria where id_categoria = '$id_categoria'";
 
 		return $conn->exec($sql);
 	} catch (Exception $e){
@@ -53,11 +53,12 @@ function editarCategoriaDAO($id_categoria, $nomeCategoria) {
 	$conn = conectar();
 
 	try {
-		$sql = "UPDATE categoria set NomeCategoria = '$nomeCategoria' where id_categoria -".$id_categoria;
+		$sql = "UPDATE categoria set nomeCategoria = '$nomeCategoria' where id_categoria = $id_categoria";
 
 		return $conn->exec($sql);
+		
 	} catch (Exception $e) {
-		echo "Erro deletarCategoriaDAO: ".$e->getMessage();
+		echo "Erro editarCategoriaDAO: ".$e->getMessage();
 	}
 }
 
