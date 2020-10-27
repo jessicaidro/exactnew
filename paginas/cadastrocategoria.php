@@ -18,8 +18,8 @@
 						</form>
 					
 
-					<h3> Todas as Categorias</h3>
-<table>
+					<h4> Todas as Categorias</h4>
+<table class="responsive-table highlight" >
 	<thead>
 		<tr>
 			<th>ID</th>
@@ -48,11 +48,16 @@
 </table>
 				<?php
 					if(isset($_GET['txtEditar'])){
-						echo "<form action=\"../Forms/formcategoria.php?txtEditar=$_GET[txtEditar]\" method=\"POST\">
-						<input type=\"text\" name=\"txtCategoria\" id=\"txtCategoria\" maxlength=\"60\" placeholder=\"Insira o nome da Categoria\" value=\"$_GET[nomeCategoria]\"/>
-						<label for=\"txtCategoria\">Nome Categoria</label>
-						<button name=\"txtEditar\" value=\"editarCategoria\" class=\"btn\" type=\"submit\">EDITAR CATEGORIA</button>
-						</form>";
+						echo "<div id=\"modal1\" class=\"modal\">
+							<div class=\"modal-content\"> <form action=\"../Forms/formcategoria.php?txtEditar=$_GET[txtEditar]\" method=\"POST\">
+								<input type=\"text\" name=\"txtCategoria\" id=\"txtCategoria\" maxlength=\"60\" placeholder=\"Insira o nome da Categoria\" value=\"$_GET[txtEditar]\"/>
+								<label for=\"txtCategoria\">Nome Categoria</label>
+								
+								<div class=\"modal-footer\">
+									<button name=\"txtEditar\" value=\"editarCategoria\" class=\"btn\" type=\"submit\">EDITAR CATEGORIA</button>
+								</form>
+							</div>
+  						</div>";
 					} elseif(isset($_GET['txtDeletar'])) {
 						echo "<form action=\"../Forms/formcategoria.php?txtDeletar=$_GET[txtDeletar]\" method=\"POST\">
 						<input type=\"hidden\" name=\"txtCategoria\" value=\"$_GET[txtDeletar]\"/>
@@ -64,3 +69,9 @@
 				?>	
 </div>
 					</div>
+
+	<script>
+		elemsModal = document.querySelectorAll('.modal');
+		const instancesModal = M.Modal.init(elemsModal);
+
+	</script>
