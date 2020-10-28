@@ -6,8 +6,9 @@ $conn = conectar();
 
 function cadastrarCategoriaDAO ($nomeCategoria) {
 	$conn = conectar();
+	
 	try{
-		$verifica = $conn->prepare("select * from categoria where NomeCategoria = ?");
+		$verifica = $conn->prepare("SELECT * FROM bdexact.categoria WHERE NomeCategoria = ?");
 		$verifica->bindValue(1, $nomeCategoria);
 		$verifica->execute();
 
@@ -17,8 +18,10 @@ function cadastrarCategoriaDAO ($nomeCategoria) {
 			$cadastrar->execute();
 
 			echo "<script> alert('Categoria cadastrada com sucesso); </script>";
+
 		} else {
 			echo "<script> alert('Já existe categoria cadastrada); </script>";
+			echo "Já existe categoria cadastrada";
 		}
 	} catch (Exception $e) {
 		echo " Erro categoriaDAO: ".$e;

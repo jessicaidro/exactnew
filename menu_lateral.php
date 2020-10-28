@@ -61,7 +61,7 @@
     });
 
     elemsSidenav = document.querySelectorAll(".sidenav");
-    const instanceSidenav = M.Sidenav.init(elemsSidenav);
+    const instances  = M.Sidenav.init(elemsSidenav);
   </script>
 </body>
 </html>
