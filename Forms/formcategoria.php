@@ -18,31 +18,30 @@
 	}
 }
 
-	// if(isset($_POST['txtCategoria']) && isset($_GET['txtEditar'])){
-	// 	$nomeCategoria = $_POST["txtCategoria"];
-	// 	$id_categoria = $_GET['txtEditar'];
+	if($_POST['acao'] == 'txtEditar'){
+		$nomeCategoria = $_POST["txtCategoria"];
+		$id_categoria = $_GET['txtEditar'];
 
-	// 	editarCategoriaBO($id_categoria, $nomeCategoria);
+		editarCategoriaBO($id_categoria, $nomeCategoria);
 
-	// 	echo "<script> window.location.href='../paginas/cadastrocategoria.php'</script> ";
-	// } else {
-	// 	echo "Os campos devem ser preenchidos <br>";
-	// 	echo "<br> <a href='../paginas/cadastrocategoria.php'> Voltar</a>";
-	// }
+		echo "<script> window.location.href='../paginas/cadastrocategoria.php'</script> ";
+		echo "Editar com sucesso";
+	} else {
+		echo "Os campos devem ser preenchidos <br>";
+		echo "<br> <a href='../paginas/cadastrocategoria.php'> Voltar</a>";
+	}
 
-	if(isset($_GET['txtDeletar'])) {
-		if(!empty($_GET['txtDeletar'])) {
-			$id_categoria = $_GET['txtDeletar'];
+	if($_POST['acao'] == 'txtDeletar') {
 
-			deletarCategoriaBO($id_categoria);
+			deletarCategoriaBO($_GET['id_categoria']);
 
 			echo "<script>
 				window.location.href=\"../paginas/cadastrocategoria.php\" </script>";
+			echo "Deletado com sucesso";
 		} else {
 			echo "Os campos devem ser preenchidos <br>";
 			echo "<br> <a href='../paginas/cadastrocategoria.php'> Voltar</a>";
 		}
-	}
 ?>
 
 

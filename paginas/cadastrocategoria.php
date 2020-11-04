@@ -41,8 +41,8 @@
 						echo '<tr>';
 						echo "<td> $row->id_categoria</td>
 							  <td> $row->nomeCategoria</td>
-							  <td> <a class=\"waves-effect waves-light btn blue\" href=\"../paginas/cadastrocategoria.php?txtEditar=$row->nomeCategoria\"><i class=\"material-icons blue \">mode_edit</i></a>
-							  <a class=\"waves-effect waves-light btn deep-orange href=\"../paginas/cadastrocategoria.php?txtDeletar=$row->id_categoria\"><i class=\"material-icons deep-orange\">delete</i></a></td>";
+							  <td> <a class=\"waves-effect waves-light btn blue\" href=\"../paginas/editarcategoria.php?id_categoria=$row->id_categoria\"><i class=\"material-icons blue \">mode_edit</i></a>
+							  <a class=\"waves-effect waves-light btn deep-orange href=\"../Forms/formcategoria.php?txtDeletar=$row->id_categoria\"><i class=\"material-icons deep-orange\">delete</i></a></td>";
 						echo '</tr>';
 					}
 				} else {
@@ -51,35 +51,11 @@
 		?>
 	</tbody>
 </table>
-				<?php
-					if(isset($_GET['txtEditar'])){
-						echo "<div id=\"modal1\" class=\"modal\">
-							<div class=\"modal-content\"> <form action=\"../Forms/formcategoria.php?txtEditar=$_GET[txtEditar]\" method=\"POST\">
-								<input type=\"text\" name=\"txtCategoria\" id=\"txtCategoria\" maxlength=\"60\" placeholder=\"Insira o nome da Categoria\" value=\"$_GET[nomeCategoria]\"/>
-								<label for=\"txtCategoria\">Nome Categoria</label>
-								
-								<div class=\"modal-footer\">
-									<button name=\"txtEditar\" value=\"editarCategoria\" class=\"btn\" type=\"submit\">EDITAR CATEGORIA</button>
-								</form>
-							</div>
-  						</div>";
-					} elseif(isset($_GET['txtDeletar'])) {
-						echo "<form action=\"../Forms/formcategoria.php?txtDeletar=$_GET[txtDeletar]\" method=\"POST\">
-						<input type=\"hidden\" name=\"txtCategoria\" value=\"$_GET[txtDeletar]\"/>
-						<label class=\"alert alert-error\">Você deseja excluir esse registro?</label>
-						<input type=\"submit\" class=\"btn\" value=\"Sim\"/>
-						<a class=\"btn\" href=\"cadastrocliente.php\">Não</a>; 
-						</form>";
-					}
-				?>	
 </div>
 					</div>
 
 	<script>
-		elemsModal = document.querySelectorAll('.modal');
-		const instances  = M.Modal.init(elemsModal);
-
-	    elemsCount = $(document).ready(function(){
-			$('input#txtCategoria'.characterCounter();
+		    elemsCount = $(document).ready(function(){
+			$('input#txtCategoria'.characterCounter());
 		});
 	</script>

@@ -56,7 +56,7 @@ function editarCategoriaDAO($id_categoria, $nomeCategoria) {
 	$conn = conectar();
 
 	try {
-		$sql = "UPDATE categoria set nomeCategoria = '$nomeCategoria' where id_categoria = $id_categoria";
+		$sql = "UPDATE categoria set nomeCategoria = '$nomeCategoria' where id_categoria =". $id_categoria;
 
 		return $conn->exec($sql);
 		
@@ -68,6 +68,3 @@ function editarCategoriaDAO($id_categoria, $nomeCategoria) {
 
 
 ?>
-
-
-
