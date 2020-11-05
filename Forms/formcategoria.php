@@ -20,16 +20,15 @@
 
 	if($_POST['acao'] == 'txtEditar'){
 		$nomeCategoria = $_POST["txtCategoria"];
-		$id_categoria = $_GET['txtEditar'];
+		$id_categoria = $_GET['id_categoria'];
 
-		editarCategoriaBO($id_categoria, $nomeCategoria);
+		editarCategoriaBO($nomeCategoria, $id_categoria);
 
 		echo "<script> window.location.href='../paginas/cadastrocategoria.php'</script> ";
-		echo "Editar com sucesso";
 	} else {
-		echo "Os campos devem ser preenchidos <br>";
-		echo "<br> <a href='../paginas/cadastrocategoria.php'> Voltar</a>";
+		echo "<script> alert('Os campos devem ser preenchidos'); </script>";
 	}
+
 
 	if($_POST['acao'] == 'txtDeletar') {
 

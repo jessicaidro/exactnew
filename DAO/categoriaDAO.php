@@ -40,6 +40,18 @@ function buscarCategoriaDAO () {
 	}
 }
 
+function buscarCategoriaGETDAO ($id_categoria) {
+	$conn = conectar();
+
+	try{
+		$buscarCategoria = "SELECT id_categoria, nomeCategoria FROM categoria where id_categoria = ".$id_categoria;
+		return $conn->query($buscarCategoria);
+
+	} catch(Exception $e) {
+		echo "Erro buscarCategoriaDAO: ". $e->getMessage();
+	}
+}
+
 function deletarCategoriaDAO($id_categoria) {
 	$conn = conectar();
 
@@ -52,12 +64,12 @@ function deletarCategoriaDAO($id_categoria) {
 	}
 }
 
-function editarCategoriaDAO($id_categoria, $nomeCategoria) {
+function editarCategoriaDAO($nomeCategoria, $id_categoria) {
 	$conn = conectar();
 
 	try {
-		$sql = "UPDATE categoria set nomeCategoria = '$nomeCategoria' where id_categoria =". $id_categoria;
-
+		$sql = "UPDATE categoria set NomeCategoria = '$nomeCategoria' where id_categoria = ". $id_categoria;
+		
 		return $conn->exec($sql);
 		
 	} catch (Exception $e) {

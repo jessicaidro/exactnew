@@ -9,6 +9,10 @@ function buscarCategoriaBO () {
 	return  buscarCategoriaDAO ();
 }
 
+function buscarCategoriaGETBO ($id_categoria) {
+	return  buscarCategoriaGETDAO ($id_categoria);
+}
+
 function deletarCategoriaBO($id_categoria){
 	return deletarCategoriaDAO($id_categoria);
 }

@@ -5,7 +5,7 @@
 
         <?php
 			include "../BO/cadastrocategoriaBO.php";
-			$resultado = buscarCategoriaBO($_GET['id_categoria']);
+			$resultado = buscarCategoriaGETBO($_GET['id_categoria']);
 
 				if($resultado->rowCount() > 0 ) {
 					while($row = $resultado->fetch(PDO::FETCH_OBJ)) {
@@ -26,4 +26,4 @@
 					<br>
 					</div>
 				</div>
-<?php } } ?>
+					<?php }} ?>
