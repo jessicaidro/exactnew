@@ -8,7 +8,7 @@
 			$resultado = buscarCategoriaGETBO($_GET['id_categoria']);
 
 				if($resultado->rowCount() > 0 ) {
-					while($row = $resultado->fetch(PDO::FETCH_OBJ)) {
+					while($r = $resultado->fetch(PDO::FETCH_OBJ)) {
 
         ?>
 				<div class="row">
@@ -17,9 +17,9 @@
 						<form action="../Forms/formcategoria.php?id_categoria=<?php echo $_GET['id_categoria']; ?>" method="POST">
 							<div class="input-field col s12">
 								
-								<input type="text" name="txtCategoria" id="txtCategoria" data-length="60" placeholder="Insira o nome da Categoria" value="<?php echo $row->nomeCategoria; ?>"/>
+								<input type="text" name="txtCategoria" id="txtCategoria" data-length="60" placeholder="Insira o nome da Categoria" value="<?php echo $r->nomeCategoria; ?>"/>
 								<label for="txtCategoria">Nome Categoria</label>
-								<button name="acao" value="EditarCategoria" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>EDITAR</button>
+								<button name="editar" value="EditarCategoria" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>EDITAR</button>
 							</div>
 						</form>
 					<br>

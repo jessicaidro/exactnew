@@ -19,10 +19,7 @@ function cadastrarCategoriaDAO ($nomeCategoria) {
 
 			echo "<script> alert('Categoria cadastrada com sucesso); </script>";
 
-		} else {
-			echo "<script> alert('Já existe categoria cadastrada); </script>";
-			echo "Já existe categoria cadastrada";
-		}
+		} 
 	} catch (Exception $e) {
 		echo " Erro categoriaDAO: ".$e;
 	}
@@ -44,7 +41,7 @@ function buscarCategoriaGETDAO ($id_categoria) {
 	$conn = conectar();
 
 	try{
-		$buscarCategoria = "SELECT id_categoria, nomeCategoria FROM categoria where id_categoria = ".$id_categoria;
+		$buscarCategoria = "SELECT id_categoria, nomeCategoria FROM Categoria where id_categoria = ".$id_categoria;
 		return $conn->query($buscarCategoria);
 
 	} catch(Exception $e) {
@@ -56,7 +53,7 @@ function deletarCategoriaDAO($id_categoria) {
 	$conn = conectar();
 
 	try {
-		$sql = "DELETE from categoria where id_categoria = '$id_categoria'";
+		$sql = "DELETE from categoria where id_categoria =". $id_categoria;
 
 		return $conn->exec($sql);
 	} catch (Exception $e){

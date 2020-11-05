@@ -1,46 +1,40 @@
 <?php 
 	include_once '../BO/cadastrocategoriaBO.php';
 
-	if($_POST["acao"] == "cadastrarCategoria"){
+	if($_POST["cadastrar"] == "CadastrarCategoria"){
+
 		if(!empty($_POST["txtCategoria"])){
 
 			$nomeCategoria = $_POST["txtCategoria"];
 
 			cadastrarCategoriaBO($nomeCategoria);
-			
-			echo "Cadastrado com sucesso";
-			echo "<script> window.history.back() </script>";
-			echo "<script> object.reload(forcedReload);</script>";
+		
+			echo "<script> alert('Cadastrado com sucesso');  window.location.href=\"../paginas/cadastrocategoria.php\"; </script>";
 
 		} else {
-		echo "<script> alert('Preencha os campos necessários'); </script>";
-		echo "<script> window.history.back() </script>";
+		echo "<script> alert('Preencha osSSSSSSSSSS campos necessários'); <a href='../paginas/cadastrocategoria.php'>VOLTAR</a> </script>";
 	}
 }
 
-	if($_POST['acao'] == 'txtEditar'){
+	if($_POST["editar"] == "EditarCategoria"){
 		$nomeCategoria = $_POST["txtCategoria"];
-		$id_categoria = $_GET['id_categoria'];
+		$id_categoria = $_GET["id_categoria"];
 
 		editarCategoriaBO($nomeCategoria, $id_categoria);
 
 		echo "<script> window.location.href='../paginas/cadastrocategoria.php'</script> ";
 	} else {
-		echo "<script> alert('Os campos devem ser preenchidos'); </script>";
+		echo "<script> alert('Os AAAAAAAAAAAAAcampos devem ser preenchidos'); </script>";
 	}
 
 
-	if($_POST['acao'] == 'txtDeletar') {
+	if($_POST["deletar"] == "DeletarCategoria") {
 
-			deletarCategoriaBO($_GET['id_categoria']);
+		deletarCategoriaDAO($_GET['id_categoria']);
 
-			echo "<script>
-				window.location.href=\"../paginas/cadastrocategoria.php\" </script>";
-			echo "Deletado com sucesso";
-		} else {
-			echo "Os campos devem ser preenchidos <br>";
-			echo "<br> <a href='../paginas/cadastrocategoria.php'> Voltar</a>";
-		}
+		echo "<script> window.location.href=\"../paginas/cadastrocategoria.php\" </script>";
+
+		} 
 ?>
 
 

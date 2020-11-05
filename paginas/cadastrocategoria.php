@@ -10,7 +10,7 @@
 								
 								<input type="text" name="txtCategoria" id="txtCategoria" data-length="60" placeholder="Insira o nome da Categoria"/>
 								<label for="txtCategoria">Nome Categoria</label>
-								<button name="acao" value="cadastrarCategoria" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
+								<button name="cadastrar" value="CadastrarCategoria" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
 							</div>
 						</form>
 					<br>
@@ -37,14 +37,16 @@
 			$resultado = buscarCategoriaBO();
 
 				if($resultado) {
-					while($row = $resultado->fetch(PDO::FETCH_OBJ)) {
+					while($r = $resultado->fetch(PDO::FETCH_OBJ)) {
 						echo '<tr>';
-						echo "<td> $row->id_categoria</td>
-							  <td> $row->nomeCategoria</td>
-							  <td> <a class=\"waves-effect waves-light btn blue\" href=\"../paginas/editarcategoria.php?id_categoria=$row->id_categoria\"><i class=\"material-icons blue \">mode_edit</i></a>
-							  <a class=\"waves-effect waves-light btn deep-orange href=\"../Forms/formcategoria.php?txtDeletar=$row->id_categoria\"><i class=\"material-icons deep-orange\">delete</i></a></td>";
+						echo "<td> $r->id_categoria</td>
+							  <td> $r->nomeCategoria</td>
+							  <td> <a class=\"waves-effect waves-light btn blue\" href=\"../paginas/editarcategoria.php?id_categoria=$r->id_categoria\"><i class=\"material-icons blue \">mode_edit</i></a> 
+							  <form action=\"../Forms/formcategoria.php?id_categoria=$r->id_categoria\" method=\"POST\"> 
+							  <button name=\"deletar\" value=\"DeletarCategoria\"  class=\"waves-effect waves-light btn deep-orange\"><i class=\"material-icons deep-orange\">delete</i></button></form>
+							 </td>";
 						echo '</tr>';
-					}
+					} ;
 				} else {
 					echo "<h4> Nenhuma categoria cadastrada.</h4>";
 				}
