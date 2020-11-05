@@ -53,9 +53,3 @@
 </table>
 </div>
 					</div>
-
-	<script>
-		    elemsCount = $(document).ready(function(){
-			$('input#txtCategoria'.characterCounter());
-		});
-	</script>
