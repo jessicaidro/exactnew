@@ -19,7 +19,7 @@
 								
 								<input type="text" name="txtCategoria" id="txtCategoria" data-length="60" placeholder="Insira o nome da Categoria" value="<?php echo $r->nomeCategoria; ?>"/>
 								<label for="txtCategoria">Nome Categoria</label>
-								<button name="editar" value="EditarCategoria" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>EDITAR</button>
+								<button name="acao" value="EditarCategoria" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>EDITAR</button>
 							</div>
 						</form>
 					<br>

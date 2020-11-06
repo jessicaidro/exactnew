@@ -17,7 +17,7 @@ function cadastrarCategoriaDAO ($nomeCategoria) {
 			$cadastrar->bindParam(1, $nomeCategoria);
 			$cadastrar->execute();
 
-			echo "<script> alert('Categoria cadastrada com sucesso); </script>";
+			echo "<script>  window.alert('Cadastrado com Sucesso!'); </script>";
 
 		} 
 	} catch (Exception $e) {
@@ -56,6 +56,8 @@ function deletarCategoriaDAO($id_categoria) {
 		$sql = "DELETE from categoria where id_categoria =". $id_categoria;
 
 		return $conn->exec($sql);
+		echo "<script>  window.alert('Deletado com Sucesso!'); </script>";	
+
 	} catch (Exception $e){
 		echo "Erro deletarCategoriaDAO: ".$e->getMessage();
 	}
@@ -68,6 +70,8 @@ function editarCategoriaDAO($nomeCategoria, $id_categoria) {
 		$sql = "UPDATE categoria set NomeCategoria = '$nomeCategoria' where id_categoria = ". $id_categoria;
 		
 		return $conn->exec($sql);
+
+		echo "<script>  window.alert('Editado com Sucesso!'); </script>";
 		
 	} catch (Exception $e) {
 		echo "Erro editarCategoriaDAO: ".$e->getMessage();

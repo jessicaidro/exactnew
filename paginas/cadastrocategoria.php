@@ -10,7 +10,7 @@
 								
 								<input type="text" name="txtCategoria" id="txtCategoria" data-length="60" placeholder="Insira o nome da Categoria"/>
 								<label for="txtCategoria">Nome Categoria</label>
-								<button name="cadastrar" value="CadastrarCategoria" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
+								<button name="acao" value="CadastrarCategoria" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
 							</div>
 						</form>
 					<br>
@@ -43,7 +43,7 @@
 							  <td> $r->nomeCategoria</td>
 							  <td> <a class=\"waves-effect waves-light btn blue\" href=\"../paginas/editarcategoria.php?id_categoria=$r->id_categoria\"><i class=\"material-icons blue \">mode_edit</i></a> 
 							  <form action=\"../Forms/formcategoria.php?id_categoria=$r->id_categoria\" method=\"POST\"> 
-							  <button name=\"deletar\" value=\"DeletarCategoria\"  class=\"waves-effect waves-light btn deep-orange\"><i class=\"material-icons deep-orange\">delete</i></button></form>
+							  <button name=\"acao\" value=\"DeletarCategoria\"  class=\"waves-effect waves-light btn deep-orange\"><i class=\"material-icons deep-orange\">delete</i></button></form>
 							 </td>";
 						echo '</tr>';
 					} ;
