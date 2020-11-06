@@ -4,13 +4,13 @@
 
 				<div class="row">
 					<div class="col s12 m6 push-m3">
-					<h3>Cadastro de <b>Categoria</b></h3>
+					<h3>Cadastro <small>|</small><b>Categoria</b></h3>
 						<form action="../Forms/formcategoria.php" id="formCategoria" method="POST">
 							<div class="input-field col s12">
 								
 								<input type="text" name="txtCategoria" id="txtCategoria" data-length="60" placeholder="Insira o nome da Categoria"/>
 								<label for="txtCategoria">Nome Categoria</label>
-								<button name="acao" value="CadastrarCategoria" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
+								<button name="acao" value="CadastrarCategoria" class="btn waves-effect waves-light " type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
 							</div>
 						</form>
 					<br>

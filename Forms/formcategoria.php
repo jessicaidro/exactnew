@@ -44,15 +44,6 @@
 	}
 ?>
 
-<script> 
-	const elemnsToast = document.querySelector("#toast");
-
-</script>
-
-
-
-
-
 
 
 
