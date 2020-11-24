@@ -1,7 +1,7 @@
 <?php
 	include_once '../BO/cadastrouserBO.php';
 	include_once '../DAO/alunoDAO.php';
-	include_once '../BO/cadastrarcursoBO.php';
+	include_once '../BO/cadastrocursoBO.php';
 
 
 	function cadastrarAlunoBO($nome, $usuario, $senha, $email, $curso, $ano){
@@ -11,7 +11,7 @@
 		if($user > 0 && $user !== false){
 			// cadastrar estado aqui
 
-			$curso = cadastrarCursoBO($curso);	
+			$curso = cadastrarCursoDAO($curso);	
 
 			$aluno = cadastrarAlunoDAO($usuario, $curso, $ano);
 

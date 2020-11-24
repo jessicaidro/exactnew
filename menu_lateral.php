@@ -15,40 +15,28 @@
 
 </head>
 <body>
-        <nav>
-          <div class="nav-wrapper blue darken-4">
-            <a href="" class="right brand-logo white-text">Logo</a>
-            
-            <a href="" data-target="mobile-navbar" class="sidenav-trigger">
-              <i class="material-icons">menu</i>
-            </a>
-            <ul id="navbar-items" class="left hide-on-med-and-down">
-              <li class=""><a href="#" class="white-text">ínicio</a></li>
-              <li class=""><a class="dropdown-trigger white-text" data-target="dropdown-menu" href="#">Cadastros <i class="material-icons right">arrow_drop_down</i></a></li>
-              <li class=""><a href="#" class="white-text">Trabalhos</a></li>
+   <div class="row grey lighten-4">
+   <a href="#" class="brand-logo center hide-on-small-only"><img height="20" src="../img/logo-exact.png"></a>
+     <a href="#" class="right waves-effect waves-teal btn-flat"><i class="tiny left material-icons">person</i> Bem vind@! Usuário</a>
+      <div class="col s3">
+      <ul id="slide-out" class="sidenav sidenav-fixed  blue-grey">
+      <li><a href="../paginas/inicio.php" class="white-text"><i class="material-icons white-text white-text">home</i><B>Ínicio</B></a></li>
+              <li><a class="subheader white-text">Cadastros</a></li>
+              <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Aluno</a></li>
+              <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Professor</a></li>
+              <li><a class="white-text" href="#"><i class="material-icons white-text">attach_file</i>Trabalhos</a></li>
+              <li><a class="white-text" href="../paginas/cadastrocategoria.php"><i class="material-icons white-text">book</i>Categoria</a></li>
+              <li><a class="white-text" href="../paginas/cadastrocurso.php"><i class="material-icons white-text">list</i>Curso</a></li>
+              <li><a class="white-text" class="subheader white-text">Relatórios</a></li>
+              <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Nome Relatorio</a></li>
+              <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Nome relatorio</a></li>
+              <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Nome relatorio</a></li>
             </ul>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger valign-wrapper"><i class="material-icons blue-text">menu</i></a>
+      </div>
+    </div>
 
-            <ul id="dropdown-menu" class="dropdown-content">
-              <li class=""><a href="" class="blue-text">Aluno</a></li>
-              <li class=""><a href="" class="blue-text">Categoria</a></li>
-              <li class=""><a href="" class="blue-text">Curso</a></li>
-              <li class=""><a href="" class="blue-text">Professor</a></li>
-            </ul>
-          </div>
-        </nav>
-
-  <ul id="mobile-navbar" class="sidenav">
-
-              <li><a href="#">ínicio</a></li>
-              <li>Cadastros</li>
-              <li><a href="#">Trabalhos</a></li>
-              <li><a href="">Aluno</a></li>
-              <li><a href="">Categoria</a></li>
-              <li><a href="">Curso</a></li>
-              <li><a href="">Professor</a></li>
-            </ul>
-
-  </ul>
 
   <script src="js/materialize.min.js"></script>
   <script src="../js/materialize.min.js"></script>

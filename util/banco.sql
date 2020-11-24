@@ -6,7 +6,7 @@ create database bdexact;
 	nome varchar(50) not null,
 	usuario varchar(50) not null,
 	senha varchar(50) not null,
-	email varchar(60) not null,
+	email varchar(60) not null
 	);
 	
 	create table Master (
@@ -18,7 +18,7 @@ create database bdexact;
 	
 	create table Curso (
 	id_curso int primary key auto_increment,
-	nome varchar(100) not null,
+	nome varchar(100) not null
 	);
 
 	create table Professor(

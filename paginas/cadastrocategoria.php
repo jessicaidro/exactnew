@@ -2,9 +2,9 @@
 	include_once "../menu_lateral.php";
 ?>
 
-				<div class="row">
+				<div class="row ">
 					<div class="col s12 m6 push-m3">
-					<h3>Cadastro <small>|</small><b>Categoria</b></h3>
+					<h3>Cadastro<b> Categoria</b></h3>
 						<form action="../Forms/formcategoria.php" id="formCategoria" method="POST">
 							<div class="input-field col s12">
 								
@@ -22,7 +22,7 @@
 				<div class="row">
 					<div class="col s12 m6 push-m3">
 						<h4> Todas as Categorias</h4>
-<table class="responsive-table highlight" >
+<table class="table highlight" >
 	<thead>
 		<tr>
 			<th>ID</th>

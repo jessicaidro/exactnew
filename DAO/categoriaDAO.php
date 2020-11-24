@@ -8,7 +8,7 @@ function cadastrarCategoriaDAO ($nomeCategoria) {
 	$conn = conectar();
 	
 	try{
-		$verifica = $conn->prepare("SELECT * FROM bdexact.categoria WHERE NomeCategoria = ?");
+		$verifica = $conn->prepare("SELECT * FROM categoria WHERE NomeCategoria = ?");
 		$verifica->bindValue(1, $nomeCategoria);
 		$verifica->execute();
 

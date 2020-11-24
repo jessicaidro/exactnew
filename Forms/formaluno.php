@@ -1,7 +1,7 @@
 <?php
   include_once "../Util/conexao.php";
   include_once "../BO/cadastroalunoBO.php";
-  include_once "../BO/cadastrarcursoBO.php";
+  include_once "../BO/cadastrocategoriaBO.php";
   include_once "../BO/cadastrouserBO.php";
 
 

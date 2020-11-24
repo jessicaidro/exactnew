@@ -4,7 +4,7 @@
 
 				<div class="row">
 					<div class="col s12 m6 push-m3">
-					<h3>Cadastro <small>|</small> <b>Curso</b></h3>
+					<h3>Cadastro <b>Curso</b></h3>
 						<form action="../Forms/formcurso.php" id="formCurso" method="POST">
 							<div class="input-field col s12">
 								
