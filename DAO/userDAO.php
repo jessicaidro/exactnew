@@ -15,35 +15,15 @@
 			$verificaEmail->bindParam(1, $email);
 			$verificaEmail->execute();
 			$conn->exec($verificaEmail);
+			
 
 			if($verificaUser->rowCount() >= 1) {
-				echo "<script>
-				var form = document.getElementById('formulario');
-			
-				form.addEventListener('submit', function (e) {
-				  var email = document.getElementById('email');
-			
-				  if (email.value == 'email@email.com') {
-					//seta algumas configurações para o tooltip
-					var instances = M.Tooltip.init(email, {html: 'Esse email já está cadastrado',
-					  position: 'top',
-					  inDuration: 500
-					}, false, false);
-			
-					//exibe o tooltip
-					instances.open();
-			
-					//depois de 1 segundo destrói o tooltip
-					setTimeout(function () {
-					  instances.destroy();
-					}, 1000);
-				  }
-			
-				  e.preventDefault();
-				});
-			  </script>";
+				echo "<script>  window.alert('Já existe esse usuário cadastrado!'); </script>";
+			} 
+			else if($verificaEmail->rowCount() >= 1) {
+				echo "<script>  window.alert('Já existe esse e-mail cadastrado!'); </script>";
 			}
-			if($verificaUser->rowCount() == 0 && $verificaEmail->rowCount() == 0) {
+			else if($verificaUser->rowCount() == 0 && $verificaEmail->rowCount() == 0) {
 				$cadastrar = $conn->prepare("INSERT INTO usuarios (nome, usuario, senha, email) VALUES ('$nome','$usuario','$senha','$email')");
 				$cadastrar->bindParam(1, $usuario);
 				$cadastrar->execute();
