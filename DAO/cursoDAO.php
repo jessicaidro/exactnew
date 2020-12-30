@@ -79,5 +79,4 @@ function editarCursoDAO($nomeCurso, $id_curso) {
 }
 
 
-
 ?>
