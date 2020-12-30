@@ -35,10 +35,19 @@
 					</div>
 
 					<div class="input-field col s12"> 
-    					<select>
-							<option value="" disabled selected>Escolha uma opção</option>
-							<option value="1" id="txtCurso">Nome Curso</option>
-						</select>
+    				<select name="curso" id="id_curso"> 
+						<?php
+							include '../util/conexao.php';
+							$sql=mysqli_query($conexao,"SELECT id_curso, nome FROM Curso");
+							while($row=mysqli_fetch_array($sql))
+							{
+								$id_curso=$row['id_curso']; 
+								$nomeCurso=$row['nome'];
+								
+								echo '<option value="'.$id_curso.'">'.$nomeCurso.'</option>';
+							}
+						?>
+                  	</select>
 						<label for="txtCurso"> Selecione o Curso*</label>
 					</div>
 					<div class="input-field col s12"> 
