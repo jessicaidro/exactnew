@@ -1,7 +1,6 @@
 <?php
 	include_once "../z_top.php";
 ?>
-
 			<div class="container">	
 
 				<div class="row">
@@ -36,17 +35,26 @@
 
 					<div class="input-field col s12"> 
     				<select name="curso" id="id_curso"> 
-						<?php
-							include '../util/conexao.php';
-							$sql=mysqli_query($conexao,"SELECT id_curso, nome FROM Curso");
-							while($row=mysqli_fetch_array($sql))
-							{
-								$id_curso=$row['id_curso']; 
-								$nomeCurso=$row['nome'];
-								
-								echo '<option value="'.$id_curso.'">'.$nomeCurso.'</option>';
+						<?php 
+							include_once '../BO/cadastrocursoBO.php';
+							if(1==1){
+								$resultado = buscarCursoBO();                          
+								if($resultado->rowCount() > 0){
+								while($registro = $resultado->fetch(PDO::FETCH_OBJ)) 
+									{
+									 ?>
+									 <option value="<?php 
+									 echo $registro->id_curso ;
+									 ?>">
+									 <?php 
+									 echo $registro->nome ; 
+									 ?>
+									 </option> 
+									 <?php
+									}
+								}
 							}
-						?>
+                     		?>
                   	</select>
 						<label for="txtCurso"> Selecione o Curso*</label>
 					</div>
@@ -59,7 +67,7 @@
 					</form>
 				</div>
 			</div>
-
+	
 				<script>
 					$(document).ready(function(){
     					$('select').formSelect();

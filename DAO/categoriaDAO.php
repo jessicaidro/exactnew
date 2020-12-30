@@ -78,6 +78,4 @@ function editarCategoriaDAO($nomeCategoria, $id_categoria) {
 	}
 }
 
-
-
 ?>
