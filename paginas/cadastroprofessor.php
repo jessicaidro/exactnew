@@ -1,75 +1,75 @@
 <?php
-	include_once "../util/z_top.php";
-	include_once "../BO/cadastroalunoBO.php";
-
-	$action = "cadastrar";
-	$nome = "";
-	$usuario = "";
-	$senha = "";
-	$email = "";
-	$curso = "";
-	$id_professor ="";
-	$id_usuario="";
-	$id_curso="";
-
+	include_once "../z_top.php";
 ?>
-<div class="contentInfos">
-	<div class="container">
-		<br>
-		<br>
-		<div class="row">
-    		<div class="col-sm">
-			<form method="POST" action="../Forms/formprofessor.php" class="cadastro">
-			<input type="hidden" name="acao" value="<?= $action ?>">
-			<input type="hidden" value="<?=$id_professor?>" name="id_professor"/>
-			<input type="hidden" value="<?=$id_usuario?>" name="id_usuario"/>
-			<input type="hidden" value="<?=$id_curso?>" name="id_curso"/>
-			<input type="hidden" name="acao" value="cadastrarAluno">
-					<h3>Cadastro Professor
-					</h3><hr />
-					<b>Nome*:</b>
-	        			<input type="text" name="txtNome" id="txtNome" class="form-control" placeholder="Insira seu Nome" value="<?=$nome?>"required autofocus/><br>
-	        		<div class="form-row">
-    					<div class="col">
-	        			<b>Usuário*:</b>
-	        				<input type="text" name="txtUsuario" id="txtUsuario" class="form-control" placeholder="Insira seu Usuario" value="<?=$usuario?>" required autofocus/><br>
-	        			</div>
-	        		<div class="col">	
-	        			<b>Senha*:</b>
-	        				<input type="password" name="txtSenha" id="txtSenha" class="form-control" placeholder="Insira sua senha" value="<?=$senha?>"required autofocus/><br>
-	        		</div>
-	        		</div>
-	        		<b>E-mail*:</b>
-	        			<input type="text" name="txtEmail" id="txtEmail" class="form-control" placeholder="Insira seu Nome" value="<?=$email?>" required autofocus/>
-	        			<br>
-	        		<div class="form-row">
-    					<div class="col">
-			        		<b>Selecione seu curso*:</b>
-			        		<div class="form-group">
-							    <select class="form-control" name="txtCurso" value="<?=$curso?>">
-								      <option value="1">1</option>
-								      <option value="2">2</option>
-								      <option value="3">3</option>
-								      <option value="4">4</option>
-								      <option value="5">5</option>
-								</select>
-							</div>
-						</div>
-						
-				</div>
+			<div class="container">	
 
-					<input type="hidden" name="tipo" value="aluno" />
-	
-			<!--<button class="btn btn-primary" id="btn-cadastro-aluno" type="button">
-				<span class="glyphicon glyphicon-floppy-disk"></span> Salvar
-			</button> -->
-	        		<center><input type="submit" class="btn btn-outline-warning" value="Cadastrar"name="cadastrar"></center>
-			</form>
-		</div>
-
+				<div class="row">
+					<h3>Cadastro <b>Professor</b></h3>
+					<form action="../Forms/formaluno.php" id="formAluno" method="POST" class="col s12">
+					
+					<div class="input-field col s12">
+						<input type="text" name="txtNome" id="txtNome" data-length="60" placeholder="Insira seu nome completo"/>
+						<label for="txtNome">Nome Completo*</label>
+					</div>
+					
+					<div class="input-field col s12">
+						<input type="text" name="txtUsuario" id="txtUsuario" data-length="60" placeholder="Insira seu nome de usuário"/>
+						<label for="txtUsuario">Usuário*</label>
+					</div>
+					
 		
-	</div>
-</div>
-<?php
-	include_once "../util/z_footer.php";
-?>
+					<div class="input-field col s6">
+						<input type="text" name="txtSenha" id="txtSenha" data-length="60" placeholder="Digite a senha"/>
+						<label for="txtSenha">Senha*</label>
+					</div>
+					
+					<div class="input-field col s6">
+						<input type="text" name="txtConfirmar" id="txtConfirmar" data-length="60" placeholder="Confirme a senha"/>
+						<label for="txtConfirmar">Confirme a Senha*</label>
+					</div>
+					
+					<div class="input-field col s12">
+						<input type="text" name="txtEmail" id="txtEmail" data-length="60" placeholder="Digite seu e-mail"/>
+						<label for="txtEmail">E-mail*</label>
+					</div>
+
+					<div class="input-field col s12"> 
+    				<select name="txtCurso" id="id_curso"> 
+						<?php 
+							include_once '../BO/cadastrocursoBO.php';
+							if(1==1){
+								$resultado = buscarCursoBO();                          
+								if($resultado->rowCount() > 0){
+								while($registro = $resultado->fetch(PDO::FETCH_OBJ)) 
+									{
+									 ?>
+									 <option value="<?php 
+									 echo $registro->id_curso ;
+									 ?>">
+									 <?php 
+									 echo $registro->nome ; 
+									 ?>
+									 </option> 
+									 <?php
+									}
+								}
+							}
+                     		?>
+                  	</select>
+						<label for="txtCurso"> Selecione o Curso*</label>
+					</div>
+					<div class="input-field col s12"> 
+						<br>
+						<br>
+						<button name="acao" value="CadastrarUserAluno" 
+							class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>Cadastrar</button>
+					</div>
+					</form>
+				</div>
+			</div>
+	
+				<script>
+					$(document).ready(function(){
+    					$('select').formSelect();
+  					});
+				</script>

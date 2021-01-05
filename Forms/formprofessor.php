@@ -1,45 +1,53 @@
-<!-- <?php
-//   include_once "../Util/conexao.php";
-//   include_once "../BO/cadastroprofessorBO.php";
-//   include_once "../BO/cadastrarcursoBO.php";
-//   include_once "../BO/cadastrouserBO.php";
+<?php
+  include_once '../BO/cadastrouserBO.php';
 
+  if($_POST["acao"] == "CadastrarUserProfessor") {
+    if(!empty($_POST["txtNome"]) && !empty($_POST["txtUsuario"]) && !empty($_POST["txtSenha"]) && !empty($_POST["txtConfirmar"]) && !empty($_POST["txtEmail"]) && !empty($_POST["txtCurso"])) {
+      
+      $nome = $_POST["txtNome"]; 
+      $usuario = $_POST["txtUsuario"]; 
+      $senha = $_POST["txtSenha"]; 
+      $confirmar_senha = $_POST["txtConfirmar"]; 
+      $email = $_POST["txtEmail"]; 
+      $tipo_user = "P"; 
+      $id_curso = $_POST["txtCurso"];
 
-//   if ($_POST['acao'] === "cadastrar") {
-//     foreach ($_POST as $key => $value) {
-//       if(
-//         $key != 'txtNome'
-//         && $key != 'txtUsuario'
-//         && $key != 'txtSenha'
-//         && $key != 'txtEmail'
-//         && $key != 'txtCurso'
-//         && (empty($value)
-//         || is_null($value)
-//         || $value == "")) {
-//         $retorno['mensagem'] = "Preencha todas as informações";
-//         $retorno['code'] = 400;
-//         echo json_encode($retorno);
-//         return;
-// }
-//     }
+      cadastrarUserBO($nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
+      echo "<script> window.location.href=\"../index.php\";</script>";
+    } else {
+      echo "<script> alert('Preencha os campos necessários'); <a href='../paginas/cadastrocurso.php'>VOLTAR</a> </script>";
+    }
+  }
 
-//     $cadastrar = cadastrarProfessorBO(
-//       $_POST['txtNome'],
-//       $_POST['txtUsuario'],
-//       $_POST['txtSenha'],
-//       $_POST['txtEmail'],
-//       $_POST['txtCurso'];
+  if($_POST["acao"] == "EditarUser"){
+		if(!empty($_POST["id_user"])) {
+      $id_user = $_POST["id_user"];
+      $nome = $_POST["txtNome"]; 
+      $usuario = $_POST["txtUsuario"]; 
+      $senha = $_POST["txtSenha"]; 
+      $confirmar_senha = $_POST["txtConfirmar"]; 
+      $email = $_POST["txtEmail"]; 
+      $tipo_user = "P"; 
+      $id_curso = $_POST["txtCurso"];
 
-//       if($cadastrar != true){
-//         $retorno['mensagem'] = "Ocorreu um erro ao cadastrar";
-//         $retorno['code'] = 500;
-//         echo json_encode($retorno);
-//         return;
-//       }else{
-//         $retorno['mensagem'] = "Cadastrado com sucesso";
-//         $retorno['code'] = 200;
-//          echo json_encode($retorno);
-//         }
-    
-//   }
-  ?> -->
+      cadastrarUserBO($id_user, $nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
+      echo "<script> window.location.href=\"../index.php\";</script>";
+    } else {
+		echo "<script> alert('Os campos devem ser preenchidos'); </script>";
+		}
+  }
+  
+  if($_POST["acao"] == "DeletarUser") {
+		if(!empty($_GET["id_user"])){
+
+			deletarUserDAO($_GET['id_user']);
+
+			echo "<script> window.location.href=\"../index.php\";</script>";
+			
+
+		} else {
+			echo "Não foi possivel Deletar o usuário";
+		} 
+	}
+ 
+  ?>

@@ -19,22 +19,22 @@
 					
 		
 					<div class="input-field col s6">
-						<input type="text" name="txtSenha" id="txtSenha" data-length="60" placeholder="Digite a senha"/>
+						<input type="password" name="txtSenha" id="txtSenha" data-length="60" placeholder="Digite a senha"/>
 						<label for="txtSenha">Senha*</label>
 					</div>
 					
 					<div class="input-field col s6">
-						<input type="text" name="txtConfirmar" id="txtConfirmar" data-length="60" placeholder="Confirme a senha"/>
+						<input type="password" name="txtConfirmar" id="txtConfirmar" data-length="60" placeholder="Confirme a senha"/>
 						<label for="txtConfirmar">Confirme a Senha*</label>
 					</div>
 					
 					<div class="input-field col s12">
-						<input type="text" name="txtEmail" id="txtEmail" data-length="60" placeholder="Digite seu e-mail"/>
+						<input type="email" name="txtEmail" id="txtEmail" data-length="60" placeholder="Digite seu e-mail"/>
 						<label for="txtEmail">E-mail*</label>
 					</div>
 
 					<div class="input-field col s12"> 
-    				<select name="curso" id="id_curso"> 
+    				<select name="txtCurso" id="id_curso"> 
 						<?php 
 							include_once '../BO/cadastrocursoBO.php';
 							if(1==1){
