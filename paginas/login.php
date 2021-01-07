@@ -1,50 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="../js/materialize.min.js"></script>
+  <title>Login - E X A C T</title>
+</head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card card-signin my-5">
-          <div class="card-body">
-          	   <center><img src="../img/ico.png" alt=""></center>
-          	   <br>
-            <h5 class="card-title text-center">L O G I N</h5>
-            <form class="form-signin">
-              <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Usuário" required autofocus>
-                <label for="inputEmail">Usuário</label>
-              </div>
 
-              <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
-                <label for="inputPassword">Senha</label>
-              </div>
+<div class="container">
+    <div class="col s7">
+      <div class="card white">
+        <div class="card-content white-text">
+          <span class="card-title blue-text text-darken-4 center">Realizar Login</span>
+          <form action="../Forms/formlogin.php" id="formLogin" method="POST">
+            <div class="input-field col s6 center">
+              <input type="text" name="txtUsuario" id="txtUsuario" data-length="60" placeholder="Insira seu nome de usuário"/>
+              <label for="txtUsuario">Usuário *</label>
+            </div>
+					
+            <div class="input-field col s6 center">
+              <input type="password" name="txtSenha" id="txtSenha" data-length="60" placeholder="Digite a senha"/>
+              <label for="txtSenha">Senha *</label>
+            </div>
 
-              <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Lembra Senha</label>
-              </div>
-              <button class="btn btn-lg btn-warning btn-block text-uppercase" type="submit">ENTRAR</button>
-            
-            </form>
+            <div class="center">
+              <button name="acao" value="RealizarLogin" class="btn waves-effect waves-light blue darken-4" type="submit">Login</button>
+            </div>
           </div>
+          <p class="blue-text text-darken4">Esqueceu a senha?</p>
         </div>
       </div>
     </div>
   </div>
-
-     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
