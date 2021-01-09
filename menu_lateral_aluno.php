@@ -28,21 +28,18 @@
    <a href="#" class="brand-logo center hide-on-small-only"><img class="v-middle" height="20" src="../img/logo-exact.png"></a>
      <a href="#" class="right waves-effect waves-teal btn-flat"><i class="tiny left material-icons v-middle">person</i> Bem vind@! Usuário</a>
       <div class="col s3">
-      <ul id="slide-out" class="sidenav sidenav-fixed  blue-grey">
-      <li><a href="../paginas/inicio.php" class="white-text"><i class="material-icons white-text">home</i><B>Ínicio</B></a></li>
-              <li><a class="subheader white-text">Cadastros</a></li>
-              <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Aluno</a></li>
-              <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Professor</a></li>
-              <li><a class="white-text" href="#"><i class="material-icons white-text">attach_file</i>Trabalhos</a></li>
-              <li><a class="white-text" href="../paginas/cadastrocategoria.php"><i class="material-icons white-text">book</i>Categoria</a></li>
-              <li><a class="white-text" href="../paginas/cadastrocurso.php"><i class="material-icons white-text">list</i>Curso</a></li>
-              <li><a class="white-text" class="subheader white-text">Relatórios</a></li>
-              <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Nome Relatorio</a></li>
-              <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Nome relatorio</a></li>
-              <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Nome relatorio</a></li>
-            </ul>
-    </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger valign-wrapper"><i class="material-icons blue-text">menu</i></a>
+        <ul id="slide-out" class="sidenav sidenav-fixed  blue-grey">
+        <li><a class="white-text center"><B>Painel Aluno</B></a></li>
+          <div class="divider"></div>
+          <li><a href="../paginas/inicio.php" class="white-text"><i class="material-icons white-text">home</i><B>Ínicio</B></a></li>
+          <li><a class="subheader white-text">Cadastros</a></li>
+          <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Aluno</a></li>
+          <li><a class="white-text" href="#"><i class="material-icons white-text">attach_file</i>Trabalhos</a></li>
+          <li><a class="white-text" class="subheader white-text">Relatórios</a></li>
+          <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Nº de Acessos</a></li>
+        </ul>
+
+        <a href="#" data-target="slide-out" class="sidenav-trigger valign-wrapper"><i class="material-icons blue-text">menu</i></a>
       </div>
     </div>
 
@@ -60,6 +57,9 @@
     elemsSidenav = document.querySelectorAll(".sidenav");
     const instances  = M.Sidenav.init(elemsSidenav);
   </script>
+
+
+<a class="sair"> <i class="material-icons v-middle black-text">clear</i> Sair</a>
 </body>
 </html>
     
