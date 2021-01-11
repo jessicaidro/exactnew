@@ -16,3 +16,8 @@
  .gap-card{
     margin-left: 2px !important;
  }
+
+.cardbox {
+    border-radius: 20px;
+
+}
