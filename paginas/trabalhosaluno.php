@@ -15,7 +15,7 @@
 									<div class="btn">
 										<span> <i class="material-icons">attach_file</i></span>
 										<input type="file">
-									</div>
+									</div> 
 
 									<div class="file-path-wrapper">
 										<input class="file-path validate" type="text" name="txtArquivo" id="txtArquivo">
@@ -29,6 +29,7 @@
 
 								<div class="input-field col s12"> 
 									<select name="txtCategoria" id="id_categoria"> 
+										<option value="0" disabled selected>Selecione uma categoria</option>
 										<?php 
 											include_once '../BO/cadastrocategoriaBO.php';
 											if(1==1){

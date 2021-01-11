@@ -32,11 +32,28 @@ $conn = conectar();
                             echo "<script> alert('Não existe usuário');</script>";
                         }
                     
-                }
+                } else if($tipo_user == "P"){
+                $verifica = $conn->query("SELECT * FROM usuarios where usuario = '$usuario' and senha = '$senha'");
+                $verifica->execute();
+
+                while($user = $verifica->fetch(PDO::FETCH_OBJ)){
+                    $_SESSION["id_user"] = $user->id_user;
+                    $_SESSION["usuario"] = $user->usuario;
+                    $_SESSION["senha"] = $user->senha;
+                }    
+                                        
+                    if($verifica->rowCount() > 0) {
+                        echo "<script> alert('Login efetuado com sucesso'); </script>";
+                        echo '<meta http-equiv = refresh content = "0; url = ../paginas/painelprofessor.php">';
+                    } else {
+                        echo "<script> alert('Não existe usuário');</script>";
+                    }
+                
             } else {
                 echo "<script> altert('Email ou senha errada!')</script>";
             }
-            }catch (Exception $e) {
+    }
+            } catch (Exception $e) {
                 echo "Erro cadastrarUserDAO: " . $e;
         }
     }

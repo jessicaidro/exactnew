@@ -28,7 +28,7 @@
       $confirmar_senha = $_POST["txtConfirmar"]; 
       $email = $_POST["txtEmail"]; 
       $tipo_user = "P"; 
-      $id_curso = $_POST["txtCurso"];
+      $id_curso = NULL;
 
       cadastrarUserBO($id_user, $nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
       echo "<script> window.location.href=\"../index.php\";</script>";
@@ -47,7 +47,8 @@
 
 		} else {
 			echo "Não foi possivel Deletar o usuário";
-		} 
+    } 
+
 	}
  
   ?>

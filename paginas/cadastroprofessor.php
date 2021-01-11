@@ -5,7 +5,7 @@
 
 				<div class="row">
 					<h3>Cadastro <b>Professor</b></h3>
-					<form action="../Forms/formaluno.php" id="formAluno" method="POST" class="col s12">
+					<form action="../Forms/formprofessor.php" id="formProfessor" method="POST" class="col s12">
 					
 					<div class="input-field col s12">
 						<input type="text" name="txtNome" id="txtNome" data-length="60" placeholder="Insira seu nome completo"/>
@@ -19,22 +19,23 @@
 					
 		
 					<div class="input-field col s6">
-						<input type="text" name="txtSenha" id="txtSenha" data-length="60" placeholder="Digite a senha"/>
+						<input type="password" name="txtSenha" id="txtSenha" data-length="60" placeholder="Digite a senha"/>
 						<label for="txtSenha">Senha*</label>
 					</div>
 					
 					<div class="input-field col s6">
-						<input type="text" name="txtConfirmar" id="txtConfirmar" data-length="60" placeholder="Confirme a senha"/>
+						<input type="password" name="txtConfirmar" id="txtConfirmar" data-length="60" placeholder="Confirme a senha"/>
 						<label for="txtConfirmar">Confirme a Senha*</label>
 					</div>
 					
 					<div class="input-field col s12">
-						<input type="text" name="txtEmail" id="txtEmail" data-length="60" placeholder="Digite seu e-mail"/>
+						<input type="email" name="txtEmail" id="txtEmail" data-length="60" placeholder="Digite seu e-mail"/>
 						<label for="txtEmail">E-mail*</label>
 					</div>
 
-					<div class="input-field col s12"> 
-    				<select name="txtCurso" id="id_curso"> 
+					<!-- <div class="input-field col s12"> 
+						<select name="txtCurso" id="id_curso"> 
+						<option value="" disabled selected>Selecione um curso</option>
 						<?php 
 							include_once '../BO/cadastrocursoBO.php';
 							if(1==1){
@@ -55,13 +56,14 @@
 								}
 							}
                      		?>
-                  	</select>
-						<label for="txtCurso"> Selecione o Curso*</label>
-					</div>
+					  	</select>
+					  	<label for="txtCurso"> Selecione o Curso</label>
+					</div> -->
+
 					<div class="input-field col s12"> 
 						<br>
 						<br>
-						<button name="acao" value="CadastrarUserAluno" 
+						<button name="acao" value="CadastrarUserProfessor" 
 							class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>Cadastrar</button>
 					</div>
 					</form>

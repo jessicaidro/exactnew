@@ -72,6 +72,17 @@
 		}
 	}
 
+	function verificaUser($id_user) {
+		$conn = conectar();
+
+		try{
+			$verifica = "SELECT tipo_user FROM Usuarios where id_user".$id_user;
+			return $conn->query($verifica);
+		} catch(Exception $e){
+			echo "Erro verificaUser: ". $e->getMessage();
+		}
+	}
+
 	function deletarUserDAO($id_user) {
 		$conn = conectar();
 

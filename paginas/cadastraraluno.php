@@ -35,6 +35,7 @@
 
 					<div class="input-field col s12"> 
     				<select name="txtCurso" id="id_curso"> 
+						<option value="0" disabled selected>Selecione um curso</option>
 						<?php 
 							include_once '../BO/cadastrocursoBO.php';
 							if(1==1){

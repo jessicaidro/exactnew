@@ -1,5 +1,13 @@
 <?php
-	include_once "../menu_lateral_aluno.php";
+    include_once "../menu_lateral_aluno.php";
+    
+    session_start();
+    $sessao = $_SESSION['id_user']; 
+
+    if (!isset($_SESSION['id_user'])) {
+        echo "<script> alert('Acesso negado'); </script>";
+        echo '<meta http-equiv = refresh content= "0; url = ../index.php">';
+}
 ?>
 
 <div class="row">
@@ -7,7 +15,7 @@
         <h4 style=> <strong> Painel Administrativo </strong> </h4>
         <div class="divider"></div>
         <br><br>
-        <i class="material-icons grey-text v-middle">face</i> <a class="blue-text text-darken-4"> Jéssica Idro de Camargo </a> <i class="material-icons grey-text v-middle tiny">create</i> <br>
+        <i class="material-icons grey-text v-middle">face</i> <a class="blue-text text-darken-4"> Jéssica Idro de Camargo </a> <a href="../Paginas/editaraluno.php?id_user=<?php echo $_SESSION['id_user']; ?>" class="btn btn-success"><i class="material-icons grey-text v-middle tiny">create</i></a> <br>
         <i class="material-icons grey-text v-middle">school</i> <a class="blue-text text-darken-4"> Análise e Desenvolvimento de Sistemas </a> <br><br>
 
         <h5 class="grey-text text-darken-4"> Trabalhos Publicados</h5>
