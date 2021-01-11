@@ -23,4 +23,9 @@
 	function editarUserBO($nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso){
 		return editarUserDAO($nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
 	}
+	
+	function verificaUserBO($id_user){
+		return verificaUser($id_user);
+	}
+
 ?>
