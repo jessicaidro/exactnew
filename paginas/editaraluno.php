@@ -14,7 +14,7 @@
 				<div class="row">
 					<div class="col s12 m6 push-m3">
 					<h3>Edite o <b>Curso</b></h3>
-						<form action="../Forms/formprofessor.php?id_user=<?php echo $_GET['id_user']; ?>" method="POST">
+						<form action="../Forms/formaluno.php?id_user=<?php echo $_GET['id_user']; ?>" method="POST">
                         <div class="input-field col s12">
 						<input type="text" name="txtNome" id="txtNome" data-length="60" placeholder="Insira seu nome completo"/>
 						<label for="txtNome">Nome Completo*</label>

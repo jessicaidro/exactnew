@@ -40,6 +40,8 @@
 						<input type="email" name="txtEmail" id="txtEmail" data-length="60" placeholder="Digite seu e-mail"/>
 						<label for="txtEmail">E-mail*</label>
 					</div>
+
+					<button name="acao" value="EditarProfessor" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>EDITAR</button>
 						</form>
 					<br>
 					<br>

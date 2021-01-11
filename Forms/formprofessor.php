@@ -19,7 +19,7 @@
     }
   }
 
-  if($_POST["acao"] == "EditarUser"){
+  if($_POST["acao"] == "EditarProfessor"){
 		if(!empty($_POST["id_user"])) {
       $id_user = $_POST["id_user"];
       $nome = $_POST["txtNome"]; 
