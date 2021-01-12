@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.login {
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
  .v-middle {
      vertical-align: middle;
  }
@@ -19,5 +34,5 @@
 
 .cardbox {
     border-radius: 20px;
-
 }
+

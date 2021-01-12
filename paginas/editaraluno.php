@@ -5,7 +5,7 @@
 
         <?php
 			include "../BO/cadastrocursoBO.php";
-			$resultado = buscarUserGETDAO($_GET['id_user']);
+			$resultado = buscarUserGETBO($_GET['id_user']);
 
 				if($resultado->rowCount() > 0 ) {
 					while($r = $resultado->fetch(PDO::FETCH_OBJ)) {
@@ -13,7 +13,7 @@
         ?>
 				<div class="row">
 					<div class="col s12 m6 push-m3">
-					<h3>Edite o <b>Curso</b></h3>
+					<h3>Editar <b>Dados Aluno</b></h3>
 						<form action="../Forms/formaluno.php?id_user=<?php echo $_GET['id_user']; ?>" method="POST">
                         <div class="input-field col s12">
 						<input type="text" name="txtNome" id="txtNome" data-length="60" placeholder="Insira seu nome completo"/>

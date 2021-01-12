@@ -31,12 +31,15 @@
         <ul id="slide-out" class="sidenav sidenav-fixed  blue-grey">
         <li><a class="white-text center"><B>Painel Aluno</B></a></li>
           <div class="divider"></div>
-          <li><a href="../index.php" class="white-text"><i class="material-icons white-text">home</i><B>Página Ínicial</B></a></li>
+          <li><a href="../index.php" class="white-text"><i class="material-icons white-text v-middle">home</i><B>Página Ínicial</B></a></li>
           <li><a class="subheader white-text">Cadastros</a></li>
-          <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Aluno</a></li>
-          <li><a class="white-text" href="#"><i class="material-icons white-text">attach_file</i>Trabalhos</a></li>
-          <li><a class="white-text" class="subheader white-text">Relatórios</a></li>
-          <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Nº de Acessos</a></li>
+          <li><a class="white-text" href=""><i class="material-icons white-text v-middle">people</i>Aluno</a></li>
+          <li><a class="white-text" href="#"><i class="material-icons white-text v-middle">attach_file</i>Trabalhos</a></li>
+          <li><a class="white-text" class="subheader white-text v-middle">Relatórios</a></li>
+          <li><a class="white-text" href=""><i class="material-icons white-text v-middle">people</i>Nº de Acessos</a></li>
+          <li><form action="../Forms/formlogin.php" method="post" class="center">
+                        <button class="btn btn-success center" name="acao" value="Sair"><i class="material-icons v-middle">clear</i>Sair</button>
+                        </form></li>
         </ul>
 
         <a href="#" data-target="slide-out" class="sidenav-trigger valign-wrapper"><i class="material-icons blue-text">menu</i></a>
@@ -59,7 +62,7 @@
   </script>
 
 
-<a class="sair"> <i class="material-icons v-middle black-text">clear</i> Sair</a>
+<a> <i class="material-icons v-middle black-text">clear</i> Sair</a>
 </body>
 </html>
     

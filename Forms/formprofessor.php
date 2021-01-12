@@ -20,8 +20,9 @@
   }
 
   if($_POST["acao"] == "EditarProfessor"){
-		if(!empty($_POST["id_user"])) {
-      $id_user = $_POST["id_user"];
+		if(!empty($_SESSION["id_user"])) {
+      session_start();
+      $id_user = $_SESSION["id_user"];
       $nome = $_POST["txtNome"]; 
       $usuario = $_POST["txtUsuario"]; 
       $senha = $_POST["txtSenha"]; 
@@ -30,7 +31,7 @@
       $tipo_user = "P"; 
       $id_curso = NULL;
 
-      cadastrarUserBO($id_user, $nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
+      editarUserDAO($id_user, $nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
       echo "<script> window.location.href=\"../index.php\";</script>";
     } else {
 		echo "<script> alert('Os campos devem ser preenchidos'); </script>";

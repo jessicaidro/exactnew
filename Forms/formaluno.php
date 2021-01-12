@@ -20,8 +20,10 @@
   }
 
   if($_POST["acao"] == "EditarAluno"){
-		if(!empty($_POST["id_user"])) {
-      $id_user = $_POST["id_user"];
+		if(!empty($_SESSION["id_user"])) {
+      session_start();
+
+      $id_user = $_SESSION["id_user"];
       $nome = $_POST["txtNome"]; 
       $usuario = $_POST["txtUsuario"]; 
       $senha = $_POST["txtSenha"]; 
@@ -30,7 +32,7 @@
       $tipo_user = "A"; 
       $id_curso = $_POST["txtCurso"];
 
-      cadastrarUserBO($id_user, $nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
+      editarUserDAO($id_user, $nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
       echo "<script> window.location.href=\"../index.php\";</script>";
     } else {
 		echo "<script> alert('Os campos devem ser preenchidos'); </script>";
@@ -38,8 +40,10 @@
   }
   
   if($_POST["acao"] == "DeletarUser") {
-		if(!empty($_GET["id_user"])){
+		if(!empty($_SESSION["id_user"])){
 
+      session_start();
+      
 			deletarUserDAO($_GET['id_user']);
 
 			echo "<script> window.location.href=\"../index.php\";</script>";

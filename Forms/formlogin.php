@@ -6,32 +6,56 @@
     if($_POST["acao"] == "RealizarLogin") {
 	    if(!empty($_POST["txtUsuario"]) && !empty($_POST["txtSenha"])){
             
-            $tipo_user = verificaUserBO($id_user);
+            $tipo_userv = verificaUserBO($id_user);
+            if($tipo_userv->rowCount() > 0){
+                while($registro = $tipo_userv->fetch(PDO::FETCH_OBJ)) {
 
-            if($tipo_user == 'A') {
+                    if($registro->tipo_user == 'A') {
 
-            $usuario = $_POST["txtUsuario"];
-            $senha = $_POST["txtSenha"];
-            $tipo_user = "A";
+                    $usuario = $_POST["txtUsuario"];
+                    $senha = $_POST["txtSenha"];
+                    $tipo_user = "A";
 
-            session_start();
+                    session_start();
 
-            loginBO($usuario, $senha, $tipo_user);
+                    loginBO($usuario, $senha, $tipo_user);
 
-        } else if($id_user == 'P') {
+                } else if($registro->tipo_user == 'P') {
 
-            $usuario = $_POST["txtUsuario"];
-            $senha = $_POST["txtSenha"];
-            $tipo_user = "P";
+                    $usuario = $_POST["txtUsuario"];
+                    $senha = $_POST["txtSenha"];
+                    $tipo_user = "P";
 
-            session_start();
+                    session_start();
 
-            loginBO($usuario, $senha, $tipo_user);
+                    loginBO($usuario, $senha, $tipo_user);
 
+                
+                 } else {
+                    echo "<script> alert('Preencha todos os campos'); </script>";
+                    echo "<script> window.history.back()</script>";
+                
+                }
+
+               
+                }
+            
+            }
+  
         }
-     } else {
-            echo "<script> alert('Preencha todos os campos'); </script>";
-            echo "<script> window.history.back()</script>";
-        }
+
     }
+
+
+            if ($_POST["acao"] == "Sair") {
+                session_start();
+                        unset($_SESSION["id_user"]);
+                        unset($_SESSION["usuario"]);
+                        unset($_SESSION["senha"]);
+                session_destroy();
+
+                echo "<script> alert('Deslogado'); </script>";
+                echo '<meta http-equiv = refresh content= "0; url = ../index.php">';
+
+            }
 ?>

@@ -15,7 +15,7 @@
         <h4 style=> <strong> Painel Administrativo </strong> </h4>
         <div class="divider"></div>
         <br><br>
-        <i class="material-icons grey-text v-middle">face</i> <a class="blue-text text-darken-4"> Jéssica Idro de Camargo </a> <a href="../Paginas/editaraluno.php?id_user=<?php echo $_SESSION['id_user']; ?>" class="btn btn-success"><i class="material-icons grey-text v-middle tiny">create</i></a> <br>
+        <i class="material-icons grey-text v-middle">face</i> <a class="blue-text text-darken-4"> Jéssica Idro de Camargo </a> <a href="../Paginas/editaraluno.php?id_user=<?php echo $_SESSION['id_user']; ?>"><i class="material-icons grey-text v-middle tiny">create</i></a> <br>
         <i class="material-icons grey-text v-middle">school</i> <a class="blue-text text-darken-4"> Análise e Desenvolvimento de Sistemas </a> <br><br>
 
         <h5 class="grey-text text-darken-4"> Trabalhos Publicados</h5>
@@ -38,4 +38,3 @@
     </div>
 </div>
 
-<a class="sair"> <i class="material-icons v-middle black-text">clear</i> Sair</a>

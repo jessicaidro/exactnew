@@ -34,9 +34,12 @@
           <li><a href="../index.php" class="white-text"><i class="material-icons white-text">home</i><B>Página Ínicial</B></a></li>
           <li><a class="subheader white-text">Cadastros</a></li>
           <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Professor</a></li>
-          <li><a class="white-text" href="#"><i class="material-icons white-text">attach_file</i>Trabalhos</a></li>
+          <li><a class="white-text" href="../paginas/trabalhos.php"><i class="material-icons white-text">attach_file</i>Trabalhos</a></li>
           <li><a class="white-text" class="subheader white-text">Relatórios</a></li>
           <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Nº de Acessos</a></li>
+          <li><form action="../Forms/formlogin.php" method="post" class="center">
+                        <button class="btn btn-success" name="acao" value="Sair"><i class="material-icons v-middle">clear</i>Sair</button>
+                        </form></li>
         </ul>
 
         <a href="#" data-target="slide-out" class="sidenav-trigger valign-wrapper"><i class="material-icons blue-text">menu</i></a>
@@ -58,8 +61,6 @@
     const instances  = M.Sidenav.init(elemsSidenav);
   </script>
 
-
-<a class="sair"> <i class="material-icons v-middle black-text">clear</i> Sair</a>
 </body>
 </html>
     
