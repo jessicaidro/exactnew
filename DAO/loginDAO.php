@@ -26,7 +26,7 @@ $conn = conectar();
                                             
             
                         if($verifica->rowCount() > 0) {
-                            echo "<script> alert('Login efetuado com sucesso'); </script>";
+                            echo "<script> M.toast({html: 'Login Efetuado com sucesso!'}) </script>";
                             echo '<meta http-equiv = refresh content = "0; url = ../paginas/painelaluno.php">';
                         } else {
                             echo "<script> alert('Não existe usuário');</script>";
