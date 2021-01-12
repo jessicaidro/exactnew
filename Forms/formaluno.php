@@ -20,10 +20,11 @@
   }
 
   if($_POST["acao"] == "EditarAluno"){
-		if(!empty($_SESSION["id_user"])) {
-      session_start();
+    session_start();
 
-      $id_user = $_SESSION["id_user"];
+		if(!empty($_SESSION["id_user"])) {
+
+       $id_user = $_SESSION["id_user"];
       $nome = $_POST["txtNome"]; 
       $usuario = $_POST["txtUsuario"]; 
       $senha = $_POST["txtSenha"]; 
@@ -40,9 +41,10 @@
   }
   
   if($_POST["acao"] == "DeletarUser") {
+    session_start();
+    
 		if(!empty($_SESSION["id_user"])){
 
-      session_start();
       
 			deletarUserDAO($_GET['id_user']);
 

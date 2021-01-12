@@ -1,14 +1,14 @@
-<?php
-	include_once "../menu_lateral.php";
-?>
+
 
 
         <?php
-			include "../BO/cadastrocursoBO.php";
-			$resultado = buscarUserGETBO($_GET['id_user']);
+			include "../BO/cadastrouserBO.php";
+			echo "<script> alert('".$_GET['id_user']."'); </script>";
+			$id_user_busca = $_GET['id_user'];
+			$resultado1 = buscarUserGETBO($id_user_busca);
 
-				if($resultado->rowCount() > 0 ) {
-					while($r = $resultado->fetch(PDO::FETCH_OBJ)) {
+				if($resultado1->rowCount() > 0 ) {
+					while($r = $resultado1->fetch(PDO::FETCH_OBJ)) {
 
         ?>
 				<div class="row">

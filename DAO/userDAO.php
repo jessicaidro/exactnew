@@ -64,7 +64,7 @@
 		$conn = conectar();
 
 		try{
-			$buscarUserget = "SELECT id_user FROM Usuarios where id_user".$id_user;
+			$buscarUserget = "SELECT id_user FROM Usuarios where id_user = ".$id_user;
 			return $conn->query($buscarUserget);
 
 		} catch(Exception $e) {
@@ -72,11 +72,12 @@
 		}
 	}
 
-	function verificaUser($id_user) {
+	function verificaUser($usuario) {
 		$conn = conectar();
 
 		try{
-			$verifica = "SELECT tipo_user FROM Usuarios where id_user".$id_user;
+			echo "<script> alert('".$usuario."'); </script>";
+			$verifica = "SELECT tipo_user FROM usuarios where usuario = '".$usuario."'";
 			return $conn->query($verifica);
 			
 		} catch(Exception $e){

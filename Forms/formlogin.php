@@ -5,8 +5,11 @@
 
     if($_POST["acao"] == "RealizarLogin") {
 	    if(!empty($_POST["txtUsuario"]) && !empty($_POST["txtSenha"])){
+            $usuario = $_POST["txtUsuario"];
+            echo "<script> alert('".$usuario."'); </script>";
             
-            $tipo_userv = verificaUserBO($id_user);
+            $tipo_userv = verificaUserBO($usuario);
+
             if($tipo_userv->rowCount() > 0){
                 while($registro = $tipo_userv->fetch(PDO::FETCH_OBJ)) {
 

@@ -3,20 +3,24 @@
 
 	$conn = conectar();
 
-	function cadastrarTrabalhoDAO($id_user, $titulo, $id_categoria, $diretorioArquivo, $ano, $descricao) {
+	function cadastrarTrabalhoDAO($id_user, $titulo, $id_categoria, $diretorioArquivo, $ano, $descricao, $tipo_trabalho, $data) {
 		global $conn;
 
 		try {
-			$cadastrar = $conn->prepare("INSERT INTO trabalhos (id_user, titulo, id_categoria, diretorioArquivo, ano, descricao) VALEUS (?,?,?,?,?,?)");
+			echo "<script> alert('".$data."'); </script>";
+			$cadastrar = $conn->prepare("INSERT INTO trabalhos (id_user, titulo, id_categoria, diretorioArquivo, ano, descricao, tipo_arquivo, datatrabalho) VALUES (?,?,?,?,?,?,?,?)");
 			$cadastrar->bindParam(1, $id_user);
 			$cadastrar->bindParam(2, $titulo);
 			$cadastrar->bindParam(3, $id_categoria);
 			$cadastrar->bindParam(4, $diretorioArquivo);
 			$cadastrar->bindParam(5, $ano);
 			$cadastrar->bindParam(6, $descricao);
-			$cadastrar->exeute();
+			$cadastrar->bindParam(7, $tipo_trabalho);
+			$cadastrar->bindParam(8, $data);
+			$cadastrar->execute();
 
 			echo "<script> alert('Cadastrado com sucesso!') </script>";
+	
 			
 		} catch (Exception $e){
 			echo "Erro cadastrarTrabalhoDAO: ".$e;

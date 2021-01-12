@@ -13,6 +13,7 @@
 	}
 
 	function buscarUserGETBO($id_user) {
+		echo "<script> alert('".$id_user."'); </script>";
 		return buscarUserGETDAO($id_user);
 	}
 
@@ -25,6 +26,8 @@
 	}
 	
 	function verificaUserBO($id_user){
+		echo "<script> alert('".$id_user."'); </script>";
+            
 		return verificaUser($id_user);
 	}
 
