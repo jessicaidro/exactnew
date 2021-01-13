@@ -70,6 +70,7 @@
               <div class="card cardbox">
                 <div class="card-content">
                   <h5 class="blue-text text-darken-1">'.$r->titulo.'</h5>
+                  <span class="new badge blue">'.$r->NomeCategoria.'</span>
                   <p class="black-text">'.$r->descricao.'</p> <br>
                   <a class="waves-effect waves-light btn blue cardbox" href="../paginas/trabalhounico.php?id_trabalho='.$r->id_trabalho.'">Ver Trabalho</a>
                 </div>

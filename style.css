@@ -17,13 +17,6 @@
      vertical-align: middle;
  }
 
- .sair {
-     position: fixed;
-     bottom: 0;
-     display: flex;
-     justify-content: flex-end;
- }
-
  .texto {
      font-size: 1rem;
  }

@@ -40,7 +40,8 @@
 		$conn = conectar();
 
 		try{
-			$buscarInicio = "SELECT id_trabalho, id_user, titulo, id_categoria, diretorioArquivo, ano, descricao, tipo_arquivo, datatrabalho FROM trabalhos order by datatrabalho desc LIMIT 4";
+			$buscarInicio = "SELECT tr.id_trabalho, tr.id_user, tr.titulo, tr.id_categoria, tr.diretorioArquivo, tr.ano, tr.descricao, tr.tipo_arquivo, tr.datatrabalho, ca.NomeCategoria FROM trabalhos
+tr inner join categoria ca on tr.id_categoria = ca.id_categoria order by tr.datatrabalho desc LIMIT 4";
 			return $conn->query($buscarInicio);
 						
 		} catch(Exception $e) {
