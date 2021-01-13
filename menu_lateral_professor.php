@@ -31,7 +31,7 @@
         <ul id="slide-out" class="sidenav sidenav-fixed  blue-grey">
         <li><a class="white-text center"><B>Painel Porfessor</B></a></li>
           <div class="divider"></div>
-          <li><a href="../index.php" class="white-text"><i class="material-icons white-text">home</i><B>Página Ínicial</B></a></li>
+          <li><a href="../paginas/index.php" class="white-text"><i class="material-icons white-text">home</i><B>Página Ínicial</B></a></li>
           <li><a class="subheader white-text">Cadastros</a></li>
           <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Professor</a></li>
           <li><a class="white-text" href="../paginas/trabalhos.php"><i class="material-icons white-text">attach_file</i>Trabalhos</a></li>

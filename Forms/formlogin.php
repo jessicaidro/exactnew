@@ -6,7 +6,7 @@
     if($_POST["acao"] == "RealizarLogin") {
 	    if(!empty($_POST["txtUsuario"]) && !empty($_POST["txtSenha"])){
             $usuario = $_POST["txtUsuario"];
-            echo "<script> alert('".$usuario."'); </script>";
+            //echo "<script> alert('".$usuario."'); </script>";
             
             $tipo_userv = verificaUserBO($usuario);
 

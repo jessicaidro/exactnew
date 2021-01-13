@@ -39,7 +39,7 @@
   
         deletarUserDAO($_GET['id_user']);
   
-        echo "<script> window.location.href=\"../index.php\";</script>";
+        echo "<script> window.location.href=\"../paginas/index.php\";</script>";
         
   
       } else {

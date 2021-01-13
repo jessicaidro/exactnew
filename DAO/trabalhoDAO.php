@@ -7,7 +7,6 @@
 		global $conn;
 
 		try {
-			echo "<script> alert('".$data."'); </script>";
 			$cadastrar = $conn->prepare("INSERT INTO trabalhos (id_user, titulo, id_categoria, diretorioArquivo, ano, descricao, tipo_arquivo, datatrabalho) VALUES (?,?,?,?,?,?,?,?)");
 			$cadastrar->bindParam(1, $id_user);
 			$cadastrar->bindParam(2, $titulo);
@@ -36,6 +35,54 @@
 			echo "Erro buscarTrabalhoGETDAO: ".$e->getMessage();
 		}
 	}
+
+	function buscarTrabalhoInicialDAO(){
+		$conn = conectar();
+
+		try{
+			$buscarInicio = "SELECT id_trabalho, id_user, titulo, id_categoria, diretorioArquivo, ano, descricao, tipo_arquivo, datatrabalho FROM trabalhos order by datatrabalho desc LIMIT 4";
+			return $conn->query($buscarInicio);
+						
+		} catch(Exception $e) {
+			echo "Erro buscarTrabalhoInicial: ".$e->getMessage();
+		}
+	}
+
+	function buscarTodosTrabalhosDAO(){
+		$conn = conectar();
+
+		try{
+			$buscarTodos = "SELECT id_trabalho, id_user, titulo, id_categoria, diretorioArquivo, ano, descricao, tipo_arquivo, datatrabalho FROM trabalhos order by datatrabalho desc";
+			return $conn->query($buscarTodos);
+						
+		} catch(Exception $e) {
+			echo "Erro buscarTodosTrabalhosDAO: ".$e->getMessage();
+		}
+	}
+
+	function buscarTrabalhoUnicoDAO($id_trabalho){
+		$conn = conectar();
+
+		try{
+			$buscarUnico = "select id_trabalho, id_user, titulo, id_categoria, diretorioArquivo, ano, descricao, tipo_arquivo, datatrabalho from trabalhos where id_trabalho = ".$id_trabalho;
+			return $conn->query($buscarUnico);
+					
+		} catch(Exception $e) {
+			echo "Erro buscarTodosTrabalhosDAO: ".$e->getMessage();
+		}
+	}
+	
+	function buscarTrabalhoUserDAO($id_user) {
+		$conn = conectar();
+
+		try{
+			$buscarUser = 'select id_trabalho, id_user, titulo, id_categoria, diretorioArquivo, ano, descricao, tipo_arquivo, datatrabalho from trabalhos where id_user = '.$id_user.' order by datatrabalho desc';
+			return $conn->query($buscarUser);
+		} catch(Exception $e) {
+			echo "Erro buscarTrabalhoUserDAO: ".$e->getMessage();
+		}
+	}
+
 
 	function editarTrabalhoDAO($titulo, $id_categoria, $diretorioArquivo, $ano, $descricao){
 		$conn = conectar();

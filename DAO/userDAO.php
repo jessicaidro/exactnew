@@ -33,7 +33,7 @@
 		   $cadastrar->execute();
 		   
 		   echo "<script> alert('Cadastrado com Sucesso'); </script>";
-		   echo '<meta http-equiv = refresh content= "0; url = ../index.php">';
+		   echo '<meta http-equiv = refresh content= "0; url = ../paginas/index.php">';
 	   }
    }else{
 	   echo "<script> alert('Esse nome de usuário já existe'); </script>";
@@ -64,7 +64,7 @@
 		$conn = conectar();
 
 		try{
-			$buscarUserget = "SELECT id_user FROM Usuarios where id_user = ".$id_user;
+			$buscarUserget = "SELECT id_user, nome, usuario, senha, email, id_curso  FROM Usuarios where id_user = ".$id_user;
 			return $conn->query($buscarUserget);
 
 		} catch(Exception $e) {
@@ -76,7 +76,7 @@
 		$conn = conectar();
 
 		try{
-			echo "<script> alert('".$usuario."'); </script>";
+			//echo "<script> alert('".$usuario."'); </script>";
 			$verifica = "SELECT tipo_user FROM usuarios where usuario = '".$usuario."'";
 			return $conn->query($verifica);
 			

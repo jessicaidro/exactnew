@@ -19,14 +19,23 @@
           </div>
         </div>
 
-        <div class="col s6 m6 s2">
-          <h3> Título do Trabalho </h3>
-          <a class="blue-text text-darken-4"> <strong>Publicado por:</strong> Jéssica Idro de Camargo </a>  <br>
-        <a class="blue-text text-darken-4"> <strong>Curso:</strong> Análise e Desenvolvimento de Sistemas </a> <br>
-       <a class="blue-text text-darken-4"> <strong>Categoria:</strong>  Sistemas </a> <br><br>
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium temporibus cumque, quae consectetur aliquid sequi 
-          nesciunt odio quaerat quis enim vero magnam fugit nemo soluta eaque ullam atque ipsum? Accusamus.</p>
-        </div>
+        <?php
+        include '../BO/trabalhoBO.php';
+
+          $id_trabalho = $_GET['id_trabalho'];
+          
+          $resultado = buscarTrabalhoUnicoBO($id_trabalho);
+          if($resultado->rowCount() > 0 ) {
+            while($r = $resultado->fetch(PDO::FETCH_OBJ)) {
+              echo '<div class="col s6 m6 s2">
+              <h3>'.$r->titulo.'</h3>
+              <a class="blue-text text-darken-4"> <strong>Publicado por:</strong>'.$r->id_user.'</a>  <br>
+              <a class="blue-text text-darken-4"> <strong>Categoria:</strong> '.$r->id_categoria.'</a> <br><br>
+              <p>'.$r->descricao.'</p>
+            </div>';
+            }
+          }
+        ?>
       </div>
      <div class="divider"></div>
       <div class="row">

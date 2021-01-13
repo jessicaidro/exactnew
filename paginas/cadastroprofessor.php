@@ -32,34 +32,6 @@
 						<input type="email" name="txtEmail" id="txtEmail" data-length="60" placeholder="Digite seu e-mail"/>
 						<label for="txtEmail">E-mail*</label>
 					</div>
-
-					<!-- <div class="input-field col s12"> 
-						<select name="txtCurso" id="id_curso"> 
-						<option value="" disabled selected>Selecione um curso</option>
-						<?php 
-							include_once '../BO/cadastrocursoBO.php';
-							if(1==1){
-								$resultado = buscarCursoBO();                          
-								if($resultado->rowCount() > 0){
-								while($registro = $resultado->fetch(PDO::FETCH_OBJ)) 
-									{
-									 ?>
-									 <option value="<?php 
-									 echo $registro->id_curso ;
-									 ?>">
-									 <?php 
-									 echo $registro->nome ; 
-									 ?>
-									 </option> 
-									 <?php
-									}
-								}
-							}
-                     		?>
-					  	</select>
-					  	<label for="txtCurso"> Selecione o Curso</label>
-					</div> -->
-
 					<div class="input-field col s12"> 
 						<br>
 						<br>
@@ -70,8 +42,3 @@
 				</div>
 			</div>
 	
-				<script>
-					$(document).ready(function(){
-    					$('select').formSelect();
-  					});
-				</script>
