@@ -58,7 +58,7 @@
                 session_destroy();
 
                 echo "<script> alert('Deslogado'); </script>";
-                echo '<meta http-equiv = refresh content= "0; url = ../index.php">';
+                echo '<meta http-equiv = refresh content= "0; url = ../paginas/index.php">';
 
             }
 ?>

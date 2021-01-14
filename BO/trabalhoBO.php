@@ -28,9 +28,12 @@
 		echo "<script> alert(".$id_user."); </script>";
 		return buscarTrabalhoUserDAO($id_user);
 	}
+	function buscarTrabalhoBO($id_trabalho) {
+		return buscarTrabalhoDAO($id_trabalho);
+	}
 
-	function editarTrabalhoBO($id_user, $titulo, $id_categoria, $diretorioArquivo, $ano, $descricao){
-		return editarTrabalhoDAO($id_user, $titulo, $id_categoria, $diretorioArquivo, $ano, $descricao);
+	function editarTrabalhoBO($id_trabalho, $titulo, $id_categoria, $diretorioArquivo, $ano, $descricao, $tipo_arquivo){
+		return editarTrabalhoDAO($id_trabalho, $titulo, $id_categoria, $diretorioArquivo, $ano, $descricao, $tipo_arquivo);
 }
 
     function deletarTrabalhoBO($id_trabalho) {

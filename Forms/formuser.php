@@ -27,7 +27,7 @@
         $email = $_POST['txtEmail'];
         $curso = $_POST['txtCurso'];
 
-        editarUserBO($nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
+        editarUserBO($id_user,$nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
         echo "<script> window.location.href='../paginas/painelaluno.php';</script> ";
       } else {
         echo "<script> alert('Os campos devem ser preenchidos'); </script>";

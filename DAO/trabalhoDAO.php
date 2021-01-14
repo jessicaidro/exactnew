@@ -36,6 +36,16 @@
 		}
 	}
 
+	function buscarTrabalhoDAO($id_trabalho) {
+		$conn = conectar();
+		try {
+			$buscar = "SELECT id_user, titulo, id_categoria, diretorioArquivo, ano, descricao, tipo_arquivo FROM trabalhos where id_trabalho = ".$id_trabalho;
+			return $conn->query($buscar);
+		} catch(Exception $e){
+			echo "Erro buscarTrabalhoGETDAO: ".$e->getMessage();
+		}
+	}
+
 	function buscarTrabalhoInicialDAO(){
 		$conn = conectar();
 
@@ -86,10 +96,10 @@ tr inner join categoria ca on tr.id_categoria = ca.id_categoria order by tr.data
 	}
 
 
-	function editarTrabalhoDAO($titulo, $id_categoria, $diretorioArquivo, $ano, $descricao){
+	function editarTrabalhoDAO($id_trabalho, $titulo, $id_categoria, $diretorioArquivo, $ano, $descricao, $tipo_arquivo){
 		$conn = conectar();
 		try {
-		$editarTrabalho = "UPDATE trabalhos set id_categoria = '$id_categoria', titulo = '$titulo', diretorioArquivo= '$diretorioArquivo', ano = '$ano', descricao = '$descricao' ";
+		$editarTrabalho = "UPDATE trabalhos set titulo = '$titulo', id_categoria = '$id_categoria', diretorioArquivo = '$diretorioArquivo', ano = '$ano', descricao = '$descricao' , tipo_arquivo = '$tipo_arquivo' WHERE = ".$id_trabalho;
 		return $conn->exec($editarTrabalho);
 
 		echo "<script> window.alert('Editado com Sucesso!'); </script>";

@@ -97,32 +97,105 @@
 
       <div class="row">
         <div class="col s12 m6 l3">
-          <div class="card cardbox">
-            <div class="card-image">
-            <img src="../img/graduation-hat.png">
-            </div>
-            
+          <div class="card cardbox small">
             <div class="card-stacked">
               <div class="card-content">
-                <p>Curso Superior de Tecnologia em Gestão da Produção Industrial.</p>
+                <p>Bacharelado em Engenharia de Produção</p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="col s12 m6 l3">
-          <div class="card cardbox">
-            <div class="card-image">
-            <img src="../img/graduation-hat.png">
-            </div>
-            
+          <div class="card cardbox small">
             <div class="card-stacked">
               <div class="card-content">
-                <p>Curso Superior de Tecnologia em Gestão da Produção Industrial.</p>
+                <p>EAD - Técnico em Secretaria Escolar</p>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="col s12 m6 l3">
+          <div class="card cardbox small">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Especialização em Gestão da Tecnologia da Informação</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l3">
+          <div class="card cardbox small">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Licenciatura em Pedagogia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l3">
+          <div class="card cardbox small">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Técnico em Automação Industrial</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l3">
+          <div class="card cardbox small">           
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Técnico em Automação Industrial Integrado ao Ensino Médio</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l3">
+          <div class="card cardbox small">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Técnico em Logística</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l3">
+          <div class="card cardbox small">          
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Técnico em Redes de Computadores Integrado ao Ensino Médio</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l3">
+          <div class="card cardbox small">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l3">
+          <div class="card cardbox small">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Curso Superior de Tecnologia em Gestão da Produção Industrial</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
