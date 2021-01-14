@@ -26,7 +26,6 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="../paginas/index.php" class="blue-text text-darken-4">Página Inicial</a></li>
         <li><a href="../paginas/todostrabalhos.php" class="blue-text text-darken-4">Trabalhos</a></li>
-        <li><a href="mobile.html" class="blue-text text-darken-4">Contato</a></li>
         <li><a href="../paginas/login.php" class="waves-effect waves-light btn-small blue darken-4"><i class="material-icons left">account_circle</i>LOGIN</a> </li>
       </ul>
     </div>

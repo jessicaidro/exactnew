@@ -25,7 +25,7 @@
 	}
 
 	function buscarTrabalhoUserBO($id_user){
-		echo "<script> alert(".$id_user."); </script>";
+		// echo "<script> alert(".$id_user."); </script>";
 		return buscarTrabalhoUserDAO($id_user);
 	}
 	function buscarTrabalhoBO($id_trabalho) {

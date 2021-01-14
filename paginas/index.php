@@ -18,7 +18,6 @@
 
 </div>
 
-      <p class="center"> Uma frase legal aqui de alguma coisa loca bem loca mesmo - <strong>Jéssica Idro 2021 </strong></p>
 
 <div class="container">
    <div class="section">
@@ -58,7 +57,7 @@
       <div class="row">
         <h5 class="header col s12 brown-text text-darken-1">De olho nas novidades! <div class="chip v-middle red white-text"><i class="tiny material-icons white-text v-middle">favorite</i><strong>NOVO</strong></div></h5>
         <div class="divider"></div>
-        </div>
+       
 
         <div class="row">
         <?php
@@ -81,126 +80,21 @@
              }       
           ?>
         </div>
-      </div>
-
         <div class="center">
           <a class="waves-effect waves-light btn buttonbox blue darken-4" href="../paginas/todostrabalhos.php"><i class="material-icons tiny v-middle">book</i>VER TODOS OS TRABALHOS</a>
         </div>
+        <br>
+        <div class="divider"></div>
+        <h5 class="center"> Uma frase legal aqui de alguma coisa loca bem loca mesmo - <strong>Jéssica Idro 2021 </strong></h5>
+        <div class="centetr">
+        <i class="material-icons center grey-text text-lighten-4"> book </i><i class="material-icons center grey-text text-lighten-4"> book </i><i class="material-icons center grey-text text-lighten-4"> book </i><i class="material-icons center grey-text text-lighten-4"> book </i>
+        </div>
+        
+        </div>
+      </div>
+
         
   <br>
-  <!--   Cursos   -->
-    <div class="container">
-      <div class="row">
-        <h5 class="header col s12 brown-text text-darken-1">Conheça dos cursos do IFSP BTV</h5>
-        <div class="divider"></div>
-      </div>
-
-      <div class="row">
-        <div class="col s12 m6 l3">
-          <div class="card cardbox small">
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Bacharelado em Engenharia de Produção</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m6 l3">
-          <div class="card cardbox small">
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>EAD - Técnico em Secretaria Escolar</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m6 l3">
-          <div class="card cardbox small">
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Especialização em Gestão da Tecnologia da Informação</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m6 l3">
-          <div class="card cardbox small">
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Licenciatura em Pedagogia</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m6 l3">
-          <div class="card cardbox small">
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Técnico em Automação Industrial</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m6 l3">
-          <div class="card cardbox small">           
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Técnico em Automação Industrial Integrado ao Ensino Médio</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m6 l3">
-          <div class="card cardbox small">
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Técnico em Logística</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m6 l3">
-          <div class="card cardbox small">          
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Técnico em Redes de Computadores Integrado ao Ensino Médio</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m6 l3">
-          <div class="card cardbox small">
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m6 l3">
-          <div class="card cardbox small">
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>Curso Superior de Tecnologia em Gestão da Produção Industrial</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-
 <?php
   include_once "../z_footer.php";
 ?>

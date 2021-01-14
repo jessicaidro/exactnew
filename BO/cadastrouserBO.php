@@ -22,7 +22,7 @@
 	}
 
 	function editarUserBO($id_user,$nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso){
-		echo "<script> alert('".$id_user."'); </script>";
+		// echo "<script> alert('".$id_user."'); </script>";
 		return editarUserDAO($id_user, $nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
 	}
 	
