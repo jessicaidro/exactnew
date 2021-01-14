@@ -16,8 +16,8 @@
 		return buscarTrabalhoInicialDAO();
 	}
 
-	function buscarTodosTrabalhosBO(){
-		return buscarTodosTrabalhosDAO();
+	function buscarTodosTrabalhosBO($idcat){
+		return buscarTodosTrabalhosDAO($idcat);
 	}
 
 	function buscarTrabalhoUnicoBO($id_trabalho) {
@@ -35,5 +35,9 @@
 
     function deletarTrabalhoBO($id_trabalho) {
         return deletarTrabalhoDAO($id_trabalho);
-    }
+	}
+	
+	function buscarTipoCategoriaBO($idcat) {
+		return buscarTipoCategoriaDAO($idcat);	
+	}
 ?>

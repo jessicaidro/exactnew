@@ -21,8 +21,9 @@
 		return deletarUserDAO($id_user);
 	}
 
-	function editarUserBO($nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso){
-		return editarUserDAO($nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
+	function editarUserBO($id_user,$nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso){
+		echo "<script> alert('".$id_user."'); </script>";
+		return editarUserDAO($id_user, $nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
 	}
 	
 	function verificaUserBO($id_user){

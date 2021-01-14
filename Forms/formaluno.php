@@ -21,11 +21,11 @@
 
   if($_POST["acao"] == "EditarAluno"){
     
-    session_start();
+    $id_user = $_GET['id_user'];
 
-		if(!empty($_SESSION["id_user"])) {
+		if(!empty($_SESSION["id_user"]) == $id_user) {
 
-       $id_user = $_SESSION["id_user"];
+      $id_user = $_SESSION["id_user"];
       $nome = $_POST["txtNome"]; 
       $usuario = $_POST["txtUsuario"]; 
       $senha = $_POST["txtSenha"]; 
@@ -35,7 +35,7 @@
       $id_curso = $_POST["txtCurso"];
 
       editarUserDAO($id_user, $nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
-      echo "<script> window.location.href=\"../paginas/index.php\";</script>";
+      echo "<script> window.location.href=\"../paginas/painelaluno.php\";</script>";
     } else {
 		echo "<script> alert('Os campos devem ser preenchidos'); </script>";
 		}

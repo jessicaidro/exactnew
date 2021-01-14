@@ -5,6 +5,7 @@
 	
 	$id_user_busca = $_GET['id_user'];
 	$resultado1 = buscarUserGETBO($id_user_busca);
+	
 	if($resultado1->rowCount() > 0 ) {
 		while($r = $resultado1->fetch(PDO::FETCH_OBJ)) {
 ?>
@@ -18,7 +19,7 @@
 					</div>
 					
 					<div class="input-field col s12">
-						<input disabled  type="text" name="txtUsuario" id="txtUsuario" data-length="60" placeholder="Insira seu nome de usuário" value="<?php echo $r->usuario; ?>"/>
+						<input type="text" name="txtUsuario" id="txtUsuario" data-length="60" placeholder="Insira seu nome de usuário" value="<?php echo $r->usuario; ?>"/>
 						<label for="txtUsuario">Usuário*</label>
 					</div>
 					
@@ -34,41 +35,15 @@
 					</div>
 					
 					<div class="input-field col s12">
-						<input disabled type="email" name="txtEmail" id="txtEmail" data-length="60" placeholder="Digite seu e-mail" value="<?php echo $r->email; ?>"/>
+						<input type="email" name="txtEmail" id="txtEmail" data-length="60" placeholder="Digite seu e-mail" value="<?php echo $r->email; ?>"/>
 						<label for="txtEmail">E-mail*</label>
 					</div>
-					<div class="input-field col s12"> 
-    				<select name="txtCurso" id="id_curso"> 
-						<option value="0" disabled selected>Selecione o Curso</option>
-						<?php 
-							include_once '../BO/cadastrocursoBO.php';
-							if(1==1){
-								$resultado = buscarCursoBO();                          
-								if($resultado->rowCount() > 0){
-								while($registro = $resultado->fetch(PDO::FETCH_OBJ)) 
-									{
-									 ?>
-									 <option value="<?php 
-									 echo $registro->id_curso ;
-									 ?>">
-									 <?php 
-									 echo $registro->nome ; 
-									 ?>
-									 </option> 
-									 <?php
-									}
-								}
-							}
-                     		?>
-                  	</select>
-						<label for="txtCurso"> Selecione o Curso*</label>
-					</div>
+				
 
                     <button name="acao" value="EditarAluno" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>EDITAR</button>
-
-						</form>
-					<br>
-					<br>
 					</div>
+						</form>
 				</div>
-					<?php }} ?>
+				
+<?php }} ?>
+

@@ -49,11 +49,12 @@ tr inner join categoria ca on tr.id_categoria = ca.id_categoria order by tr.data
 		}
 	}
 
-	function buscarTodosTrabalhosDAO(){
+	function buscarTodosTrabalhosDAO($idcat){
 		$conn = conectar();
 
 		try{
-			$buscarTodos = "SELECT id_trabalho, id_user, titulo, id_categoria, diretorioArquivo, ano, descricao, tipo_arquivo, datatrabalho FROM trabalhos order by datatrabalho desc";
+			$buscarTodos = "SELECT tr.id_trabalho, tr.id_user, tr.titulo, tr.id_categoria, tr.diretorioArquivo, tr.ano, tr.descricao, tr.tipo_arquivo, tr.datatrabalho, ca.NomeCategoria FROM trabalhos
+			tr inner join categoria ca on tr.id_categoria = ca.id_categoria where tr.id_categoria = ".$idcat." order by ca.NomeCategoria ASC";
 			return $conn->query($buscarTodos);
 						
 		} catch(Exception $e) {
@@ -65,7 +66,7 @@ tr inner join categoria ca on tr.id_categoria = ca.id_categoria order by tr.data
 		$conn = conectar();
 
 		try{
-			$buscarUnico = "select id_trabalho, id_user, titulo, id_categoria, diretorioArquivo, ano, descricao, tipo_arquivo, datatrabalho from trabalhos where id_trabalho = ".$id_trabalho;
+			$buscarUnico = "select tr.id_trabalho, tr.id_user, tr.titulo, tr.id_categoria, tr.diretorioArquivo, tr.ano, tr.descricao, tr.tipo_arquivo, tr.datatrabalho, ca.NomeCategoria, us.nome FROM trabalhos tr inner join categoria ca on tr.id_categoria = ca.id_categoria inner join usuarios us on tr.id_user = us.id_user where id_trabalho =".$id_trabalho;
 			return $conn->query($buscarUnico);
 					
 		} catch(Exception $e) {
@@ -109,6 +110,17 @@ function deletarTrabalhoDAO($id_trabalho) {
 
 	} catch (Exception $e){
 		echo "Erro deletarTrabalhoDAO: ".$e->getMessage();
+	}
+}
+
+function buscarTipoCategoriaDAO($idcat) {
+	$conn = conectar();
+
+	try{
+		$buscarUser = "select id_categoria, NomeCategoria from categoria where id_categoria in (select id_categoria from trabalhos where id_categoria = ".$idcat.")";
+		return $conn->query($buscarUser);
+	} catch(Exception $e) {
+		echo "Erro buscarTrabalhoUserDAO: ".$e->getMessage();
 	}
 }
 

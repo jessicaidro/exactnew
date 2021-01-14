@@ -9,6 +9,7 @@
         echo '<meta http-equiv = refresh content= "0; url = ../index.php">';
 }
 ?>
+<link rel="stylesheet" href="../style.css">
 
 <div class="row">
     <div class="col s12 m6 push-m3">

@@ -25,7 +25,7 @@ function cadastrarCategoriaDAO ($nomeCategoria) {
 	}
 }
 
-function buscarCategoriaDAO () {
+function buscarCategoriaDAO() {
 	$conn = conectar();
 
 	try{

@@ -54,7 +54,6 @@
   </div>
   
 <!--   Trabalhos section   -->
-  <div class="parallax-container valign-wrapper">
     <div class="container">
       <div class="row">
         <h5 class="header col s12 brown-text text-darken-1">De olho nas novidades! <div class="chip v-middle red white-text"><i class="tiny material-icons white-text v-middle">favorite</i><strong>NOVO</strong></div></h5>
@@ -67,12 +66,15 @@
             $buscarInicio = buscarTrabalhoInicialBO();
             while($r = $buscarInicio->fetch(PDO::FETCH_OBJ)) {
               echo '<div class="col s12 m6 l3">
-              <div class="card cardbox">
+              <div class="card cardbox small">
                 <div class="card-content">
+                <span class="badge blue darken-4 white-text buttonbox right-align">'.$r->NomeCategoria.'</span> <br>
                   <h5 class="blue-text text-darken-1">'.$r->titulo.'</h5>
-                  <span class="new badge blue">'.$r->NomeCategoria.'</span>
                   <p class="black-text">'.$r->descricao.'</p> <br>
-                  <a class="waves-effect waves-light btn blue cardbox" href="../paginas/trabalhounico.php?id_trabalho='.$r->id_trabalho.'">Ver Trabalho</a>
+                  <div class="card-action">
+                  <a class="waves-effect waves-light btn white blue-text text-darken-4 cardbox z-depth-0 semborder" href="../paginas/trabalhounico.php?id_trabalho='.$r->id_trabalho.'">Ver Trabalho <i class="material-icons v-middle tiny">chevron_right</i></a>
+        </div>
+      
                 </div>
                 </div>
               </div>';
@@ -80,16 +82,13 @@
           ?>
         </div>
       </div>
-    </div>
-  </div>
 
         <div class="center">
-          <a class="waves-effect waves-light btn cardbox blue darken-4" href="../paginas/todostrabalhos.php"><i class="material-icons tiny v-middle">book</i> VER TODOS OS TRABALHOS</a>
+          <a class="waves-effect waves-light btn buttonbox blue darken-4" href="../paginas/todostrabalhos.php"><i class="material-icons tiny v-middle">book</i>VER TODOS OS TRABALHOS</a>
         </div>
         
-  
+  <br>
   <!--   Cursos   -->
-  <div class="parallax-container valign-wrapper">
     <div class="container">
       <div class="row">
         <h5 class="header col s12 brown-text text-darken-1">Conheça dos cursos do IFSP BTV</h5>
@@ -127,7 +126,7 @@
       </div>
 
     </div>
-  </div>
+
 
 <?php
   include_once "../z_footer.php";

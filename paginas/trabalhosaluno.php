@@ -81,7 +81,7 @@
 				</p>
 			</div>	
 			<div class="col s12"> 
-				<button name="acao" value="CadastrarTrabalho" class="btn waves-effect waves-light " type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
+				<button name="acao" value="CadastrarTrabalhoAluno" class="btn waves-effect waves-light " type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
 			</div>
 		</form>
 	</div>

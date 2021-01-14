@@ -1,4 +1,4 @@
-  <footer class="page-footer blue darken-4">
+  <footer class="page-footer blue darken-4 rodape">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -27,9 +27,5 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Desenvolvido por: <a class="brown-text text-lighten-3" href="#">Jéssica I Camargo</a>
-      </div>
-    </div>
+</main>
   </footer>

@@ -18,25 +18,23 @@
   <link rel="stylesheet" href="../style.css">
 
 </head>
-<body>
+<body class="body">
   <nav class="blue-grey lighten-5">
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo"><img src="../img/exact.png"> </a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html" class="blue-text text-darken-4">Página Inicial</a></li>
-        <li><a href="badges.html" class="blue-text text-darken-4">Sobre</a></li>
-        <li><a href="collapsible.html" class="blue-text text-darken-4">Trabalhos</a></li>
+        <li><a href="../paginas/index.php" class="blue-text text-darken-4">Página Inicial</a></li>
+        <li><a href="../paginas/todostrabalhos.php" class="blue-text text-darken-4">Trabalhos</a></li>
         <li><a href="mobile.html" class="blue-text text-darken-4">Contato</a></li>
-        <li><a class="waves-effect waves-light btn-small blue darken-4"><i class="material-icons left">account_circle</i>LOGIN</a> </li>
+        <li><a href="../paginas/login.php" class="waves-effect waves-light btn-small blue darken-4"><i class="material-icons left">account_circle</i>LOGIN</a> </li>
       </ul>
     </div>
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
     <li><a href="../paginas/index.php">Página Inicial</a></li>
-    <li><a href="badges.html">Sobre</a></li>
-    <li><a href="">Trabalhos</a></li>
-    <li><a class="waves-effect waves-light btn-small blue darken-4"><i class="material-icons left">account_circle</i>LOGIN</a> </li>
+    <li><a href="../paginas/todostrabalhos.php">Trabalhos</a></li>
+    <li><a href="../paginas/login.php" class="waves-effect waves-light btn-small blue darken-4"><i class="material-icons left">account_circle</i>LOGIN</a> </li>
   </ul>
 

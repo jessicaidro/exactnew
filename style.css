@@ -7,12 +7,15 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
-.login {
-    padding: 2rem;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+.body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+main {
+    flex: 1 0 auto;
+}
+
  .v-middle {
      vertical-align: middle;
  }
@@ -21,11 +24,12 @@
      font-size: 1rem;
  }
 
- .gap-card{
-    margin-left: 2px !important;
- }
-
 .cardbox {
     border-radius: 20px;
 }
-
+.buttonbox{
+    border-radius: 10px;
+}
+.semborder {
+    border: 0;
+}
