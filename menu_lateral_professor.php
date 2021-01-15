@@ -13,23 +13,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="js/materialize.min.js"></script>
 
+<link rel="stylesheet" href="../style.css">
+
 </head>
 <body>
-   <div class="row grey lighten-4">
-   <a href="#" class="brand-logo center hide-on-small-only"><img class="v-middle" height="20" src="../img/logo-exact.png"></a>
-     <a href="#" class="right waves-effect waves-teal btn-flat"><i class="tiny left material-icons v-middle">person</i> Bem vind@! Usuário</a>
+   <div class="row">
       <div class="col s3">
         <ul id="slide-out" class="sidenav sidenav-fixed  blue-grey">
-        <li><a class="white-text center"><B>Painel Professor</B></a></li>
+        <li><a class="white-text center v-middle">Painel do Professor</a></li>
           <div class="divider"></div>
-          <li><a href="../paginas/index.php" class="white-text"><i class="material-icons white-text">home</i><B>Página Ínicial</B></a></li>
+          <li><a href="../paginas/painelprofessor.php" class="white-text"><i class="material-icons white-text v-middle">home</i><B>Página Inicial</B></a></li>
           <li><a class="subheader white-text">Cadastros</a></li>
-          <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Professor</a></li>
-          <li><a class="white-text" href="../paginas/trabalhos.php"><i class="material-icons white-text">attach_file</i>Trabalhos</a></li>
-          <li><a class="white-text" class="subheader white-text">Relatórios</a></li>
-          <li><a class="white-text" href=""><i class="material-icons white-text">people</i>Nº de Acessos</a></li>
+          <li><a class="white-text" href="../paginas/editarprofessor.php"><i class="material-icons white-text v-middle">people</i>Professor</a></li>
+          <li><a class="white-text" href="../paginas/trabalhos.php"><i class="material-icons white-text v-middle">attach_file</i>Trabalhos</a></li>
           <li><form action="../Forms/formlogin.php" method="post" class="center">
-                        <button class="btn btn-success" name="acao" value="Sair"><i class="material-icons v-middle">clear</i>Sair</button>
+                        <button class="btn btn-success middle v-middle" name="acao" value="Sair"><i class="material-icons v-middle">clear</i>Sair</button>
                         </form></li>
         </ul>
 

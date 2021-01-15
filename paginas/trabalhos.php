@@ -82,7 +82,7 @@
 					<div class="input-field col s12"> 
 						<br>
 						<br>
-						<button name="acao" value="CadastrarTrabalho" class="btn waves-effect waves-light " type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
+						<button name="acao" value="CadastrarTrabalhoProfessor" class="btn waves-effect waves-light " type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
 								</div>
 							</form>
 					</div>

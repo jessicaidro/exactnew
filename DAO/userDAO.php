@@ -71,6 +71,17 @@
 			echo "Erro buscarUserGETDAO: ". $e->getMessage();
 		}
 	}
+	function buscarUserCursoDAO($id_user) {
+		$conn = conectar();
+
+		try{
+			$buscarUserCurso = "SELECT us.id_user, us.id_curso, c.id_curso, c.nome FROM Usuarios us inner join curso c on us.id_curso = c.id_curso where id_user = ".$id_user;
+			return $conn->query($buscarUserCurso);
+
+		} catch(Exception $e) {
+			echo "Erro buscarUserCursoDAO: ". $e->getMessage();
+		}
+	}
 
 	function verificaUser($usuario) {
 		$conn = conectar();

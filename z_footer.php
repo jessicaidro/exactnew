@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Sobre o EXACT</h5>
-          <p class="grey-text text-lighten-4">O EXACT foi realizado para publicar os trabalhos de conclusão de curso e artigos dos aluno e professores do IFSP BTV...<a href="../paginas/sobre.php"> Ler mais</a></p>
+          <p class="grey-text text-lighten-4">O EXACT foi desenvolvido para publicar os trabalhos de conclusão de curso e artigos dos aluno e professores do IFSP BTV...<a href="../paginas/sobre.php"> Ler mais</a></p>
 
 
         </div>

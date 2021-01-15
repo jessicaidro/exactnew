@@ -12,6 +12,12 @@
     min-height: 100vh;
     flex-direction: column;
 }
+.bg {
+    background: linear-gradient(45deg, #0d47a1 , #1565c0 );
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+}
 main {
     flex: 1 0 auto;
 }

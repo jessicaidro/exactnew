@@ -85,11 +85,12 @@
         </div>
         <br>
         <div class="divider"></div>
-        <h5 class="center"> Uma frase legal aqui de alguma coisa loca bem loca mesmo - <strong>Jéssica Idro 2021 </strong></h5>
-        <div class="centetr">
-        <i class="material-icons center grey-text text-lighten-4"> book </i><i class="material-icons center grey-text text-lighten-4"> book </i><i class="material-icons center grey-text text-lighten-4"> book </i><i class="material-icons center grey-text text-lighten-4"> book </i>
+        <div class="center">
+        <br>
+        <i class="material-icons center grey-text text-lighten-4"> book </i><i class="material-icons center grey-text text-lighten-4"> search </i><i class="material-icons center grey-text text-lighten-4"> book </i><i class="material-icons center grey-text text-lighten-4"> search </i><i class="material-icons center grey-text text-lighten-4"> book </i><i class="material-icons center grey-text text-lighten-4"> search </i>
         </div>
-        
+        <h5 class="center"> Uma frase legal aqui de alguma coisa loca bem loca mesmo - <strong>Jéssica Idro 2021 </strong></h5>
+   
         </div>
       </div>
 

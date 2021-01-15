@@ -19,19 +19,14 @@
 
 </head>
 <body>
-   <div class="row grey lighten-4">
-   <a href="#" class="brand-logo center hide-on-small-only"><img class="v-middle" height="20" src="../img/logo-exact.png"></a>
-     <a href="#" class="right waves-effect waves-teal btn-flat"><i class="tiny left material-icons v-middle">person</i> Bem vind@! Usuário</a>
-      <div class="col s3">
+   <div class="row">
         <ul id="slide-out" class="sidenav sidenav-fixed  blue-grey">
-        <li><a class="white-text center"><B>Painel Aluno</B></a></li>
+        <li><a class="white-text center v-middle">Painel do Aluno</a></li>
           <div class="divider"></div>
-          <li><a href="../paginas/painelaluno.php" class="white-text"><i class="material-icons white-text v-middle">home</i><B>Página Ínicial</B></a></li>
+          <li><a href="../paginas/painelaluno.php" class="white-text v-middle"><i class="material-icons white-text v-middle">home</i><B>Página Inicial</B></a></li>
           <li><a class="subheader white-text">Cadastros</a></li>
           <li><a class="white-text" href=""><i class="material-icons white-text v-middle">people</i>Aluno</a></li>
           <li><a class="white-text" href="../paginas/trabalhosaluno.php"><i class="material-icons white-text v-middle">attach_file</i>Trabalhos</a></li>
-          <li><a class="white-text" class="subheader white-text v-middle">Relatórios</a></li>
-          <li><a class="white-text" href=""><i class="material-icons white-text v-middle">people</i>Nº de Acessos</a></li>
           <li><form action="../Forms/formlogin.php" method="post" class="center">
                 <button class="btn btn-success center" name="acao" value="Sair"><i class="material-icons v-middle">clear</i>Sair</button>
               </form></li>

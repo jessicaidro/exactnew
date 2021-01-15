@@ -1,5 +1,5 @@
 <?php
-	include_once "../menu_lateral.php";
+	include_once "../menu_lateral_master.php";
 ?>
 
 				<div class="row ">

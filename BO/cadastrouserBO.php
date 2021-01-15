@@ -16,7 +16,9 @@
 		//echo "<script> alert('".$id_user."'); </script>";
 		return buscarUserGETDAO($id_user);
 	}
-
+	function buscarUserCursoBO($id_user) {
+		return buscarUserCursoDAO($id_user);
+	}
 	function deletarUserBO($id_user) {
 		return deletarUserDAO($id_user);
 	}

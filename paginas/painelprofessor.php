@@ -13,30 +13,39 @@
 
 <div class="row">
     <div class="col s12 m6 push-m3">
-        <h4 style=> <strong> Painel Administrativo </strong> </h4>
+        <h4> <strong> Painel do Professor </strong> </h4>
         <div class="divider"></div>
         <br><br>
-        <i class="material-icons grey-text v-middle">face</i> <a class="blue-text text-darken-4"> Jéssica Idro de Camargo </a> <a href="../Paginas/editarprofessor.php?id_user=<?php echo $_SESSION['id_user']; ?>"><i class="material-icons grey-text v-middle tiny">create</i></a> <br>
-        <i class="material-icons grey-text v-middle">school</i> <a class="blue-text text-darken-4"> Análise e Desenvolvimento de Sistemas </a> <br><br>
+        <?php
+            include_once "../BO/cadastrouserBO.php";
+            $id_user = $_SESSION['id_user'];
+            $buscarUser = buscarUserGETBO($id_user);
+            while($r = $buscarUser->fetch(PDO::FETCH_OBJ)) {
+              echo '<i class="material-icons grey-text v-middle">face</i> <a class="blue-text text-darken-4">'.$r->nome.'</a>';      
+             }       
+          ?>
+          <a href="../Paginas/editarprofessor.php?id_user=<?php echo $_SESSION['id_user']; ?>"><i class="material-icons grey-text v-middle tiny">create</i></a> <br>
 
         <h5 class="grey-text text-darken-4"> Trabalhos Publicados</h5>
-        <div class="card grey lighten-4 gap-card">
-            <div class="card-content grey-text">
-                <span class="card-title blue-text text-darken-4">Nome do Trabalho </span> 
-                <span class="new badge" data-badge-caption="">CATEGORIA</span>
-                <p class="grey-text text-darken-4">Descrição do trabalho trabalho trabalho trabalho trabalho trabalho trabalho trabalho</p>
-                <p class="texto"> Ano de Conclusão: <strong>2021</strong></p>
-            </div>
+        <div class="row">
+        <?php
+            include_once "../BO/trabalhoBO.php";
+            $id_user = $_SESSION['id_user'];
+            $buscarUser = buscarTrabalhoUserBO($id_user);
+            while($r = $buscarUser->fetch(PDO::FETCH_OBJ)) {
+              echo '<div class="col s12 m4"><div class="card cardbox small">
+                <div class="card-content">
+                  <h5 class="blue-text text-darken-1">'.$r->titulo.'</h5>
+                  <p class="black-text">'.$r->descricao.'</p> <br>
+                  <div class="card-action">
+                  <a class="waves-effect waves-light btn white blue-text text-darken-4 cardbox z-depth-0 semborder" href="../paginas/trabalhounico.php?id_trabalho='.$r->id_trabalho.'">Ver Trabalho <i class="material-icons v-middle tiny">chevron_right</i></a>
         </div>
-        <div class="card grey lighten-4 gap-card">
-            <div class="card-content grey-text">
-                <span class="card-title blue-text text-darken-4">Nome do Trabalho </span> 
-                <span class="new badge" data-badge-caption="">CATEGORIA</span>
-                <p class="grey-text text-darken-4">Descrição do trabalho trabalho trabalho trabalho trabalho trabalho trabalho trabalho</p>
-                <p class="texto"> Ano de Conclusão: <strong>2021</strong></p>
-            </div>
         </div>
+                </div>
+              </div>';
+             }       
+          ?>
+        </div>
+        
     </div>
 </div>
-
-<a class="sair"> <i class="material-icons v-middle black-text">clear</i> Sair</a>
