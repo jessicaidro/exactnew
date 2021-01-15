@@ -16,14 +16,14 @@
 ?>
 <div class="row">
 	<div class="col s12 m6 push-m3">
-		<h3>Cadastro <b>Trabalho</b></h3>
+		<h3>Editar <b>Trabalho</b></h3>
 
 		<form action="../Forms/formtrabalho.php" id="formTrabalho" method="POST" enctype="multipart/form-data" class="col s12">
 			<div class="input-field col s12">
 				<input type="text" name="txtTitulo" id="txtTitulo" data-length="60" placeholder="Insira o nome do Trabalho" value="<?php echo $r->titulo; ?>"/>
 				<label for="txtTitulo">Título</label>
 			</div>
-
+				<input type="hidden" name="id_trabalho" value="<?php echo $_GET['id_trabalho']; ?>">
 			<div class="input-field col s12">
 				<input type="text" name="txtDescricao" id="txtDescricao" data-length="60" placeholder="Insira a descrição do Trabalho" value="<?php echo $r->descricao; ?>"/>
 				<label for="txtDescricao">Descrição</label>
@@ -85,6 +85,7 @@
 					</label>
 				</p>
 			</div>	
+			<input type="hidden" name="token" value="<?php echo $r->diretorioArquivo; ?>">
 			<div class="col s12"> 
 				<button name="acao" value="EditarTrabalhoAluno" class="btn waves-effect waves-light " type="submit"><i class="material-icons right">send</i>EDITAR</button>
 			</div>

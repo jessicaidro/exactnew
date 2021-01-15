@@ -30,7 +30,7 @@
           <div class="col s12 m4 l8">
             <div class="card cardbox ">
             <div class="card-content">
-                <h5 class="blue-text text-darken-4 center">Login</h5> 
+                <h5 class="blue-text text-darken-4 center">Área Restrita</h5> 
                 
                 <label for="txtUsuario" class="blue-text text-darken-4">Usuário *</label>
                 <input type="text" name="txtUsuario" id="txtUsuario" data-length="60" class="blue-text text-darken-4" placeholder="Insira seu nome de usuário"/>
@@ -38,10 +38,10 @@
                 <label for="txtSenha" class="blue-text text-darken-4">Senha *</label>
                 <input type="password" name="txtSenha" id="txtSenha" data-length="60" class="blue-text text-darken-4" placeholder="Digite a senha"/>
                 <div class="center">
-                  <button name="acao" value="RealizarLogin" class="btn waves-effect waves-light blue darken-4 white-text center-align" type="submit">Login</button>
+                  <a name="acao" value="RealizarLogin" class="btn waves-effect waves-light blue darken-4 white-text center-align" type="submit">Login</a>
                 </div>
                 <br>
-                <a class="blue-text text-darken-4 center" href="../paginas/tipouser.php"><h5>Ou cadastre-se aqui!</h5></a> 
+                
           </div>
           <div class="col s12 m4 l2"></div>
         </div>

@@ -13,8 +13,8 @@ $conn = conectar();
             $verificaUsuario->execute();
 
             if($verificaUsuario->rowCount() == 1) {
-                while($cu = $verificaUsuario->fetch(PDO::FETCH_OBJ)){
-                if($cu->tipo_user == "A"){
+                while($us = $verificaUsuario->fetch(PDO::FETCH_OBJ)){
+                if($us->tipo_user == "A"){
                     $verifica = $conn->query("SELECT id_user, usuario, senha FROM usuarios where usuario = '$usuario' and senha = '$senha'");
                     $verifica->execute();
                     if($verifica->rowCount() == 1) {
@@ -23,7 +23,7 @@ $conn = conectar();
                             $_SESSION["id_user"] = $user->id_user;
                             $_SESSION["usuario"] = $user->usuario;
                             $_SESSION["senha"] = $user->senha;
-                            echo "<script> M.toast({html: 'Login Efetuado com sucesso!'}) </script>";
+                            echo "<script> alert('Login efetuado com sucesso'); </script>";
                             echo '<meta http-equiv = refresh content = "0; url = ../paginas/painelaluno.php">';
                     }
                     } 
@@ -32,7 +32,7 @@ $conn = conectar();
                     }
                 } 
                 
-                if($cu->tipo_user == "P"){
+                if($us->tipo_user == "P"){
                     $verifica = $conn->query("SELECT * FROM usuarios where usuario = '$usuario' and senha = '$senha'");
                     $verifica->execute();
                     if($verifica->rowCount() == 1) {

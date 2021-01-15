@@ -15,14 +15,13 @@
       cadastrarUserBO($nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
       echo "<script> window.location.href=\"../paginas/index.php\";</script>";
     } else {
-      echo "<script> alert('Preencha os campos necessários'); <a href='../paginas/cadastrocurso.php'>VOLTAR</a> </script>";
+      echo "<script> alert('Preencha os campos necessários'); <a href='../paginas/cadastroprofessor.php'>VOLTAR</a> </script>";
     }
   }
 
   if($_POST["acao"] == "EditarProfessor"){
-		if(!empty($_SESSION["id_user"])) {
-      session_start();
-      $id_user = $_SESSION["id_user"];
+		
+      $id_user = $GET["id_user"];
       $nome = $_POST["txtNome"]; 
       $usuario = $_POST["txtUsuario"]; 
       $senha = $_POST["txtSenha"]; 
@@ -32,11 +31,10 @@
       $id_curso = NULL;
 
       editarUserDAO($id_user, $nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso);
-      echo "<script> window.location.href=\"../paginas/index.php\";</script>";
+      echo "<script> window.location.href=\"../paginas/painelprofessor.php\";</script>";
     } else {
 		echo "<script> alert('Os campos devem ser preenchidos'); </script>";
 		}
-  }
   
   if($_POST["acao"] == "DeletarUser") {
 		if(!empty($_GET["id_user"])){

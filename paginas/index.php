@@ -27,7 +27,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center blue-text text-darken-4"><i class="material-icons medium">plus_one</i></h2>
-            <h5 class="center">Realize seu cadastro</h5>
+            <h5 class="center">Realize seu cadastro clicando <a href="../paginas/tipouser.php">aqui</a></h5>
            
           </div>
         </div>

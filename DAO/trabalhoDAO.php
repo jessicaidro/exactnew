@@ -29,7 +29,7 @@
 	function buscarTrabalhoGETDAO($id_user) {
 		$conn = conectar();
 		try {
-			$buscarTrabalhos = "SELECT id_trabalho FROM trabalhos where id_user".$id_user;
+			$buscarTrabalhos = "SELECT id_trabalho FROM trabalhos where id_user = ".$id_user;
 			return $conn->query($buscarTrabalhos);
 		} catch(Exception $e){
 			echo "Erro buscarTrabalhoGETDAO: ".$e->getMessage();
@@ -99,7 +99,7 @@ tr inner join categoria ca on tr.id_categoria = ca.id_categoria order by tr.data
 	function editarTrabalhoDAO($id_trabalho, $titulo, $id_categoria, $diretorioArquivo, $ano, $descricao, $tipo_arquivo){
 		$conn = conectar();
 		try {
-		$editarTrabalho = "UPDATE trabalhos set titulo = '$titulo', id_categoria = '$id_categoria', diretorioArquivo = '$diretorioArquivo', ano = '$ano', descricao = '$descricao' , tipo_arquivo = '$tipo_arquivo' WHERE = ".$id_trabalho;
+		$editarTrabalho = "UPDATE trabalhos set titulo = '".$titulo."', id_categoria = ".$id_categoria.", diretorioArquivo = ".$diretorioArquivo.", ano = ".$ano.", descricao = '".$descricao."' , tipo_arquivo = '".$tipo_arquivo."' WHERE id_trabalho = ".$id_trabalho;
 		return $conn->exec($editarTrabalho);
 
 		echo "<script> window.alert('Editado com Sucesso!'); </script>";

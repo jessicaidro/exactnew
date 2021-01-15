@@ -11,7 +11,7 @@
 ?>
 				<div class="row">
 					<div class="col s12 m6 push-m3">
-					<h3>Editar <b>Dados Aluno</b></h3>
+					<h3>Editar <b>Dados Professor</b></h3>
 						<form action="../Forms/formprofessor.php?id_user=<?php echo $_GET['id_user']; ?>" method="POST">
                         <div class="input-field col s12">
 						<input type="text" name="txtNome" id="txtNome" data-length="60" placeholder="Insira seu nome completo" value="<?php echo $r->nome; ?>"/>
@@ -40,7 +40,7 @@
 					</div>
 				
 
-                    <button name="acao" value="EditarAluno" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>EDITAR</button>
+                    <button name="acao" value="EditarProfessor" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>EDITAR</button>
 					</div>
 						</form>
 				</div>

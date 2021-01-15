@@ -25,7 +25,6 @@
           <div class="divider"></div>
           <li><a href="../paginas/painelaluno.php" class="white-text v-middle"><i class="material-icons white-text v-middle">home</i><B>Página Inicial</B></a></li>
           <li><a class="subheader white-text">Cadastros</a></li>
-          <li><a class="white-text" href=""><i class="material-icons white-text v-middle">people</i>Aluno</a></li>
           <li><a class="white-text" href="../paginas/trabalhosaluno.php"><i class="material-icons white-text v-middle">attach_file</i>Trabalhos</a></li>
           <li><form action="../Forms/formlogin.php" method="post" class="center">
                 <button class="btn btn-success center" name="acao" value="Sair"><i class="material-icons v-middle">clear</i>Sair</button>

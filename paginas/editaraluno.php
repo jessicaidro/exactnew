@@ -30,7 +30,7 @@
 					</div>
 					
 					<div class="input-field col s6">
-						<input type="password" name="txtConfirmar" id="txtConfirmar" data-length="60" placeholder="Confirme a senha"/>
+						<input type="password" name="txtConfirmar" id="txtConfirmar" data-length="60" placeholder="Confirme a senha" required/>
 						<label for="txtConfirmar">Confirme a Senha*</label>
 					</div>
 					
@@ -38,12 +38,43 @@
 						<input type="email" name="txtEmail" id="txtEmail" data-length="60" placeholder="Digite seu e-mail" value="<?php echo $r->email; ?>"/>
 						<label for="txtEmail">E-mail*</label>
 					</div>
+
+					<div class="input-field col s12"> 
+    				<select name="txtCurso" id="id_curso"> 
+						<option value="<?php echo $r->id_curso; ?>" disabled selected><?php echo $r->id_curso; ?></option>
+						<?php 
+							include_once '../BO/cadastrocursoBO.php';
+							if(1==1){
+								$resultado = buscarCursoBO();                          
+								if($resultado->rowCount() > 0){
+								while($registro = $resultado->fetch(PDO::FETCH_OBJ)) 
+									{
+									 ?>
+									 <option value="<?php 
+									 echo $registro->id_curso ;
+									 ?>">
+									 <?php 
+									 echo $registro->nome ; 
+									 ?>
+									 </option> 
+									 <?php
+									}
+								}
+							}
+                     		?>
+                  	</select>
+						<label for="txtCurso"> Selecione o Curso*</label>
+					</div>
 				
 
                     <button name="acao" value="EditarAluno" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>EDITAR</button>
 					</div>
 						</form>
 				</div>
-				
+				<script>
+					$(document).ready(function(){
+    					$('select').formSelect();
+  					});
+				</script>
 <?php }} ?>
 

@@ -110,11 +110,13 @@
 		}
 	}
 
+
+
 	function editarUserDAO($id_user,$nome, $usuario, $senha, $confirmar_senha, $email, $tipo_user, $id_curso){
 		$conn = conectar();
 
 		try {
-			$editarUser = "UPDATE Usuarios set nome = '$nome', usuario = '$usuario', senha = '$senha', confirmar_senha = '$confirmar_senha', email = '$email', tipo_user = '$tipo_user', id_curso = '$id_curso' WHERE ".$id_user;
+			$editarUser = "UPDATE usuarios set nome = '".$nome."', usuario = '".$usuario."', senha = '".$senha."', confirmar_senha = '".$confirmar_senha."', email = '".$email."', tipo_user = '".$tipo_user."', id_curso = ".$id_curso." WHERE id_user = ".$id_user ;
 			return $conn->exec($editarUser);
 
 			echo "<script> window.alert('Editado com Sucesso!'); </script>";
