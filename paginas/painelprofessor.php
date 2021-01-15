@@ -41,10 +41,10 @@
                   <form action="../Forms/formtrabalho.php?id_trabalho='.$r->id_trabalho.'" method="POST"> 
                   <a class="waves-effect waves-light btn white blue-text text-darken-4 cardbox z-depth-0 semborder" href="../paginas/trabalhounico.php?id_trabalho='.$r->id_trabalho.'">Ver Trabalho <i class="material-icons v-middle tiny">chevron_right</i></a>
                   <a class="waves-effect waves-light" href="../paginas/editartrabalhoprofessor.php?id_trabalho='.$r->id_trabalho.'"><i class="material-icons blue-text">mode_edit</i></a>
-							    <button name="acao" value="DeletarTrabalhoProfessor"  class="waves-effect waves-light white"><i class="material-icons deep-orange-text white">delete</i></button></form>
+							    <button name="acao" value="DeletarTrabalhoProfessor" class="waves-effect waves-light white"><i class="material-icons deep-orange-text white">delete</i></button></form>
         </div>
                 </div>
-              </div>';
+                </div></div>';
              }       
           ?>
         </div>
