@@ -48,6 +48,23 @@ $conn = conectar();
                         echo "<script> alert('Não existe usuário');</script>";
                     }
                 }   
+
+                if($us->usuario == "master"){
+                    $verifica = $conn->query("SELECT * FROM usuarios where usuario = '$usuario' and senha = '$senha'");
+                    $verifica->execute();
+                    if($verifica->rowCount() == 1) {
+                        while($user = $verifica->fetch(PDO::FETCH_OBJ)){
+                            $_SESSION["id_user"] = $user->id_user;
+                            $_SESSION["usuario"] = $user->usuario;
+                            $_SESSION["senha"] = $user->senha;
+                            echo "<script> alert('Login efetuado com sucesso'); </script>";
+                            echo '<meta http-equiv = refresh content = "0; url = ../paginas/painelmaster.php">';
+                        }                           
+                    } 
+                    else {
+                        echo "<script> alert('Acesso negado');</script>";
+                    }
+                } 
             } 
         }
         else {

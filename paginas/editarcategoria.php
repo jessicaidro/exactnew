@@ -17,9 +17,9 @@
 						<form action="../Forms/formcategoria.php?id_categoria=<?php echo $_GET['id_categoria']; ?>" method="POST">
 							<div class="input-field col s12">
 								
-								<input type="text" name="txtCategoria" id="txtCategoria" data-length="60" placeholder="Insira o nome da Categoria" value="<?php echo $r->nomeCategoria; ?>"/>
+								<input type="text" name="txtCategoria" id="txtCategoria" max-length="100" placeholder="Insira o nome da Categoria" value="<?php echo $r->nomeCategoria; ?>"/>
 								<label for="txtCategoria">Nome Categoria</label>
-								<button name="acao" value="EditarCategoria" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>EDITAR</button>
+								<button name="acao" value="EditarCategoria" class="btn waves-effect waves-light blue darken-4" type="submit"><i class="material-icons right">send</i>EDITAR</button>
 							</div>
 						</form>
 					<br>

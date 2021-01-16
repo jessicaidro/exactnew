@@ -15,17 +15,17 @@
 
 		<form action="../Forms/formtrabalho.php" id="formTrabalho" method="POST" enctype="multipart/form-data" class="col s12">
 			<div class="input-field col s12">
-				<input type="text" name="txtTitulo" id="txtTitulo" data-length="60" placeholder="Insira o nome do Trabalho"/>
+				<input type="text" name="txtTitulo" id="txtTitulo" max-length="50" placeholder="Insira o nome do Trabalho"/>
 				<label for="txtTitulo">Título</label>
 			</div>
 
 			<div class="input-field col s12">
-				<input type="text" name="txtDescricao" id="txtDescricao" data-length="60" placeholder="Insira a descrição do Trabalho"/>
+				<input type="text" name="txtDescricao" id="txtDescricao" max-length="60" placeholder="Insira a descrição do Trabalho"/>
 				<label for="txtDescricao">Descrição</label>
 			</div>
 					
 			<div class="file-field input-field col s6">
-				<div class="btn">
+				<div class="btn blue darken-4">
 					<span> <i class="material-icons">attach_file</i></span>
 					<input type="file" name="txtArquivo" id="txtArquivo">
 				</div> 
@@ -35,7 +35,7 @@
 			</div>	
 
 			<div class="input-field col s6">
-				<input type="text" name="txtAno" id="txtAno" data-length="60" placeholder="__/__/____"/>
+				<input type="text" name="txtAno" id="txtAno" max-length="4" placeholder="AAAA"/>
 				<label for="txtAno">Ano Conclusão</label>
 			</div>
 
@@ -81,7 +81,7 @@
 				</p>
 			</div>	
 			<div class="col s12"> 
-				<button name="acao" value="CadastrarTrabalhoAluno" class="btn waves-effect waves-light " type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
+				<button name="acao" value="CadastrarTrabalhoAluno" class="btn waves-effect waves-light blue darken-4 " type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
 			</div>
 		</form>
 	</div>
@@ -93,3 +93,18 @@
     					$('select').formSelect();
   					});
 				</script>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+     $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+
+    $("#toast").click(function(){
+      M.toast({html: 'I am a toast!'})
+    });
+  </script>

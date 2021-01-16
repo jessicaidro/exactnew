@@ -37,8 +37,8 @@
                       if($buscarInicio->rowCount() > 0){
                         while($r = $buscarInicio->fetch(PDO::FETCH_OBJ)) {
                           echo '
-                          <div class="col s4">
-                          <div class="card cardbox small">
+                          <div class="col s12 m6 l3">
+                          <div class="card cardbox medium hoverable">
                             <div class="card-content">
                               <h5 class="blue-text text-darken-1">'.$r->titulo.'</h5>
                               <p class="black-text">'.$r->descricao.'</p> <br>

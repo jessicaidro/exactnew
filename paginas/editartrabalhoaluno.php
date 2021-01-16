@@ -20,7 +20,7 @@
 
 		<form action="../Forms/formtrabalho.php" id="formTrabalho" method="POST" enctype="multipart/form-data" class="col s12">
 			<div class="input-field col s12">
-				<input type="text" name="txtTitulo" id="txtTitulo" data-length="60" placeholder="Insira o nome do Trabalho" value="<?php echo $r->titulo; ?>"/>
+				<input type="text" name="txtTitulo" id="txtTitulo" data-length="50" placeholder="Insira o nome do Trabalho" value="<?php echo $r->titulo; ?>"/>
 				<label for="txtTitulo">Título</label>
 			</div>
 				<input type="hidden" name="id_trabalho" value="<?php echo $_GET['id_trabalho']; ?>">
@@ -40,7 +40,7 @@
 			</div>	
 
 			<div class="input-field col s6">
-				<input type="text" name="txtAno" id="txtAno" data-length="60" placeholder="__/__/____" value="<?php echo $r->ano; ?>"/>
+				<input type="text" name="txtAno" id="txtAno" max-length="4" placeholder="AAAA" value="<?php echo $r->ano; ?>"/>
 				<label for="txtAno">Ano Conclusão</label>
 			</div>
 
@@ -87,7 +87,7 @@
 			</div>	
 			<input type="hidden" name="token" value="<?php echo $r->diretorioArquivo; ?>">
 			<div class="col s12"> 
-				<button name="acao" value="EditarTrabalhoAluno" class="btn waves-effect waves-light " type="submit"><i class="material-icons right">send</i>EDITAR</button>
+				<button name="acao" value="EditarTrabalhoAluno" class="btn waves-effect waves-light blue darken-4 " type="submit"><i class="material-icons right">send</i>EDITAR</button>
 			</div>
 		</form>
 	</div>

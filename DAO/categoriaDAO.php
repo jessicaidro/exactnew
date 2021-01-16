@@ -29,7 +29,7 @@ function buscarCategoriaDAO() {
 	$conn = conectar();
 
 	try{
-		$buscarCategoria = "SELECT id_categoria, nomeCategoria FROM categoria";
+		$buscarCategoria = "SELECT id_categoria, nomeCategoria FROM categoria order by nomeCategoria asc";
 		return $conn->query($buscarCategoria);
 
 	} catch(Exception $e) {

@@ -19,7 +19,7 @@
 								
 								<input type="text" name="txtCurso" id="txtCurso" data-length="60" placeholder="Insira o nome do Curso" value="<?php echo $r->nome; ?>"/>
 								<label for="txtCurso">Nome Curso</label>
-								<button name="acao" value="EditarCurso" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>EDITAR</button>
+								<button name="acao" value="EditarCurso" class="btn waves-effect waves-light blue darken-4" type="submit"><i class="material-icons right">send</i>EDITAR</button>
 							</div>
 						</form>
 					<br>

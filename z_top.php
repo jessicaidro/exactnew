@@ -21,8 +21,8 @@
 <body class="body">
   <nav class="blue-grey lighten-5">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><img src="../img/exact.png"> </a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a href="../paginas/index.php" class="brand-logo"><img src="../img/logo-exact-l.png" height="40px"> </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons blue-text text-darken-4">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="../paginas/index.php" class="blue-text text-darken-4">Página Inicial</a></li>
         <li><a href="../paginas/todostrabalhos.php" class="blue-text text-darken-4">Trabalhos</a></li>

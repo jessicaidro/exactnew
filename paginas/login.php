@@ -20,7 +20,7 @@
 </head>
 <body>
   <div class="center">
-    <img src="../img/logo.png" height="50px">
+    <img src="../img/logo-exact-l.png" height="50px">
   </div>
 
     <form action="../Forms/formlogin.php" id="formLogin" method="POST">

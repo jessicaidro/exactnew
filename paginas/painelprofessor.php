@@ -33,7 +33,7 @@
             $id_user = $_SESSION['id_user'];
             $buscarUser = buscarTrabalhoUserBO($id_user);
             while($r = $buscarUser->fetch(PDO::FETCH_OBJ)) {
-              echo '<div class="col s12 m4"><div class="card cardbox small">
+              echo '<div class="col s12 m4"><div class="card cardbox small hoverable">
                 <div class="card-content">
                   <h5 class="blue-text text-darken-1">'.$r->titulo.'</h5>
                   <p class="black-text">'.$r->descricao.'</p> <br>

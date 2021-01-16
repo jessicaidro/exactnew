@@ -2,21 +2,20 @@
   include_once "../z_top.php";
 ?>
 
-<div id="index-banner" class="parallax-container">
-  <div class="section no-pad-bot">
-   <div class="container">
-     <br><br>
-      <h1 class="header center blue-text text-darken-4">EXACT</h1>
-    <div class="row center">
-      <h5 class="header col s12 light blue-text text-darken-4">Biblioteca Online de TCC e Artigos Científicos</h5>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="col s12 m4">
+        <br><br><br><br><br><br>
+          <img class="responsive-img center-align" src="../img/log-pq.png" height="30">
+          <br><br><br>
+          <h5 class="light blue-grey-text text-darken-4 center-align">Biblioteca Online de TCC e Artigos Científicos</h5>
+        </div>
+      </div>
     </div>
-    <br><br>
+    <div class="parallax"><img src="../img/slide01.png" alt="Unsplashed background">
     </div>
   </div>
-  <div class="parallax"><img src="../img/slide01.png" alt="Unsplashed background img 1">
-  </div>
-
-</div>
 
 
 <div class="container">
@@ -26,7 +25,7 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center blue-text text-darken-4"><i class="material-icons medium">plus_one</i></h2>
+            <h2 class="center blue-grey-text"><i class="material-icons medium">plus_one</i></h2>
             <h5 class="center">Realize seu cadastro clicando <a href="../paginas/tipouser.php">aqui</a></h5>
            
           </div>
@@ -34,7 +33,7 @@
 
       <div class="col s12 m4">
         <div class="icon-block">
-          <h2 class="center blue-text text-darken-4"><i class="material-icons medium">insert_drive_file</i></h2>
+          <h2 class="center blue-grey-text"><i class="material-icons medium">insert_drive_file</i></h2>
           <h5 class="center">Anexe seu trabalho</h5>
          
         </div>
@@ -42,7 +41,7 @@
 
       <div class="col s12 m4">
         <div class="icon-block">
-          <h2 class="center blue-text text-darken-4"><i class="material-icons medium">pageview</i></h2>
+          <h2 class="center blue-grey-text"><i class="material-icons medium">pageview</i></h2>
           <h5 class="center">E todos poderão visualizar</h5>
           
         </div>
@@ -65,7 +64,7 @@
             $buscarInicio = buscarTrabalhoInicialBO();
             while($r = $buscarInicio->fetch(PDO::FETCH_OBJ)) {
               echo '<div class="col s12 m6 l3">
-              <div class="card cardbox small">
+              <div class="card cardbox medium hoverable ">
                 <div class="card-content">
                 <span class="badge blue darken-4 white-text buttonbox right-align">'.$r->NomeCategoria.'</span> <br>
                   <h5 class="blue-text text-darken-1">'.$r->titulo.'</h5>

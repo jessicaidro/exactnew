@@ -26,7 +26,7 @@
           <li><a class="subheader white-text">Cadastros</a></li>
           <li><a class="white-text" href="../paginas/trabalhos.php"><i class="material-icons white-text v-middle">attach_file</i>Trabalhos</a></li>
           <li><form action="../Forms/formlogin.php" method="post" class="center">
-                        <button class="btn btn-success middle v-middle" name="acao" value="Sair"><i class="material-icons v-middle">clear</i>Sair</button>
+                        <button class="btn btn-success middle v-middle blue darken-4" name="acao" value="Sair"><i class="material-icons v-middle">clear</i>Sair</button>
                         </form></li>
         </ul>
 

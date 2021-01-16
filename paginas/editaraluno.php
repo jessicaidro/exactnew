@@ -14,28 +14,28 @@
 					<h3>Editar <b>Dados Aluno</b></h3>
 						<form action="../Forms/formaluno.php?id_user=<?php echo $_GET['id_user']; ?>" method="POST">
                         <div class="input-field col s12">
-						<input type="text" name="txtNome" id="txtNome" data-length="60" placeholder="Insira seu nome completo" value="<?php echo $r->nome; ?>"/>
+						<input type="text" name="txtNome" id="txtNome" max-length="50" placeholder="Insira seu nome completo" value="<?php echo $r->nome; ?>"/>
 						<label for="txtNome">Nome Completo*</label>
 					</div>
 					
 					<div class="input-field col s12">
-						<input type="text" name="txtUsuario" id="txtUsuario" data-length="60" placeholder="Insira seu nome de usuário" value="<?php echo $r->usuario; ?>"/>
+						<input type="text" name="txtUsuario" id="txtUsuario" max-length="50" placeholder="Insira seu nome de usuário" value="<?php echo $r->usuario; ?>"/>
 						<label for="txtUsuario">Usuário*</label>
 					</div>
 					
 		
 					<div class="input-field col s6">
-						<input type="password" name="txtSenha" id="txtSenha" data-length="60" placeholder="Digite a senha" value="<?php echo $r->senha; ?>"/>
+						<input type="password" name="txtSenha" id="txtSenha" max-length="50" placeholder="Digite a senha" value="<?php echo $r->senha; ?>"/>
 						<label for="txtSenha">Senha*</label>
 					</div>
 					
 					<div class="input-field col s6">
-						<input type="password" name="txtConfirmar" id="txtConfirmar" data-length="60" placeholder="Confirme a senha" required/>
+						<input type="password" name="txtConfirmar" id="txtConfirmar" max-length="50" placeholder="Confirme a senha" required/>
 						<label for="txtConfirmar">Confirme a Senha*</label>
 					</div>
 					
 					<div class="input-field col s12">
-						<input type="email" name="txtEmail" id="txtEmail" data-length="60" placeholder="Digite seu e-mail" value="<?php echo $r->email; ?>"/>
+						<input type="email" name="txtEmail" id="txtEmail" max-length="60" placeholder="Digite seu e-mail" value="<?php echo $r->email; ?>"/>
 						<label for="txtEmail">E-mail*</label>
 					</div>
 
@@ -67,7 +67,7 @@
 					</div>
 				
 
-                    <button name="acao" value="EditarAluno" class="btn waves-effect waves-light" type="submit"><i class="material-icons right">send</i>EDITAR</button>
+                    <button name="acao" value="EditarAluno" class="btn waves-effect waves-light blue darken-4" type="submit"><i class="material-icons right">send</i>EDITAR</button>
 					</div>
 						</form>
 				</div>

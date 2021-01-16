@@ -87,7 +87,7 @@
 			</div>	
 			<input type="hidden" name="token" value="<?php echo $r->diretorioArquivo; ?>">
 			<div class="col s12"> 
-				<button name="acao" value="EditarTrabalhoProfessor" class="btn waves-effect waves-light " type="submit"><i class="material-icons right">send</i>EDITAR</button>
+				<button name="acao" value="EditarTrabalhoProfessor" class="btn waves-effect waves-light blue darken-4" type="submit"><i class="material-icons right">send</i>EDITAR</button>
 			</div>
 		</form>
 	</div>

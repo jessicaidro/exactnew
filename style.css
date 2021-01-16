@@ -42,3 +42,10 @@ main {
 blockquote{
     border-left-color: #0d47a1 !important;
 }
+
+.bgheader {
+    background: ("img/slide01.png");
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}

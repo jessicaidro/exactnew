@@ -8,9 +8,9 @@
 						<form action="../Forms/formcategoria.php" id="formCategoria" method="POST">
 							<div class="input-field col s12">
 								
-								<input type="text" name="txtCategoria" id="txtCategoria" data-length="60" placeholder="Insira o nome da Categoria"/>
+								<input type="text" name="txtCategoria" id="txtCategoria" max-length="60" placeholder="Insira o nome da Categoria" required/>
 								<label for="txtCategoria">Nome Categoria</label>
-								<button name="acao" value="CadastrarCategoria" class="btn waves-effect waves-light " type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
+								<button name="acao" value="CadastrarCategoria" class="btn waves-effect waves-light blue darken-4" type="submit"><i class="material-icons right">send</i>CADASTRAR</button>
 							</div>
 						</form>
 					<br>
