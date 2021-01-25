@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Sobre o EXACT</h5>
-          <p class="grey-text text-lighten-4">O EXACT foi desenvolvido para publicar os trabalhos de conclusão de curso e artigos dos aluno e professores do IFSP BTV...<br><a href="../paginas/sobre.php" class="btn white blue-text"> Ler mais</a></p>
+          <p class="grey-text text-lighten-4">O EXACT foi desenvolvido para publicar os trabalhos de conclusão de curso e artigos dos aluno e professores do IFSP BTV...<br><a href="../paginas/sobre.php" class="btn white black-text"> Ler mais</a></p>
           <br>
           <a class="white-text"> Todos os direitos reservados <i class="material-icons  v-middle">copyright</i></a><a class="white-text" href="../paginas/loginmaster.php"> EXACT 2021</a>
 

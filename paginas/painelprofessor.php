@@ -26,14 +26,14 @@
           ?>
           <a href="../Paginas/editarprofessor.php?id_user=<?php echo $_SESSION['id_user']; ?>"><i class="material-icons grey-text v-middle tiny">create</i></a> <br>
 
-        <h5 class="grey-text text-darken-4"> Trabalhos Publicados</h5>
+        <h5 class="grey-text text-darken-4">Trabalhos Publicados</h5>
         <div class="row">
         <?php
             include_once "../BO/trabalhoBO.php";
             $id_user = $_SESSION['id_user'];
             $buscarUser = buscarTrabalhoUserBO($id_user);
             while($r = $buscarUser->fetch(PDO::FETCH_OBJ)) {
-              echo '<div class="col s12 m4"><div class="card cardbox small hoverable">
+              echo '<div class="col s12 m4"><div class="card cardbox medium hoverable">
                 <div class="card-content">
                   <h5 class="blue-text text-darken-1">'.$r->titulo.'</h5>
                   <p class="black-text">'.$r->descricao.'</p> <br>
@@ -41,7 +41,9 @@
                   <form action="../Forms/formtrabalho.php?id_trabalho='.$r->id_trabalho.'" method="POST"> 
                   <a class="waves-effect waves-light btn white blue-text text-darken-4 cardbox z-depth-0 semborder" href="../paginas/trabalhounico.php?id_trabalho='.$r->id_trabalho.'">Ver Trabalho <i class="material-icons v-middle tiny">chevron_right</i></a>
                   <a class="waves-effect waves-light" href="../paginas/editartrabalhoprofessor.php?id_trabalho='.$r->id_trabalho.'"><i class="material-icons blue-text">mode_edit</i></a>
-							    <button name="acao" value="DeletarTrabalhoProfessor" class="waves-effect waves-light white"><i class="material-icons deep-orange-text white">delete</i></button></form>
+                  <button name="acao" value="DeletarTrabalhoProfessor" class="waves-effect waves-light white"><i class="material-icons deep-orange-text white">delete</i></button></form>
+                  <br>
+                  <p> Total de Visualização: '.$r->contador.'</p>
         </div>
                 </div>
                 </div></div>';

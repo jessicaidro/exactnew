@@ -1,5 +1,7 @@
 <?php
   include_once "../z_top.php";
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -22,6 +24,7 @@
           
           $resultado = buscarTrabalhoUnicoBO($id_trabalho);
           if($resultado->rowCount() > 0 ) {
+            $contador = contaVisitasBO($id_trabalho);
             while($r = $resultado->fetch(PDO::FETCH_OBJ)) {
               echo '
                 <h4>'.$r->titulo.'</h4>

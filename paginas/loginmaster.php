@@ -30,7 +30,7 @@
           <div class="col s12 m4 l8">
             <div class="card cardbox ">
             <div class="card-content">
-                <h5 class="blue-text text-darken-4 center">Login</h5> 
+                <h5 class="blue-text text-darken-4 center">Área Restrita</h5> 
                 
                 <label for="txtUsuario" class="blue-text text-darken-4">Usuário *</label>
                 <input type="text" name="txtUsuario" id="txtUsuario" data-length="60" class="blue-text text-darken-4" placeholder="Insira seu nome de usuário"/>

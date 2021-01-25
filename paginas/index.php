@@ -7,7 +7,7 @@
       <div class="container">
         <div class="col s12 m4">
         <br><br><br><br><br><br>
-          <img class="responsive-img center-align" src="../img/log-pq.png" height="30">
+          <img class="responsive-img center-align" src="../img/log-pq.png" alt="Logo do sistema" height="30">
           <br><br><br>
           <h5 class="light blue-grey-text text-darken-4 center-align">Biblioteca Online de TCC e Artigos Científicos</h5>
         </div>
@@ -50,14 +50,36 @@
     </div>
     </div>
   </div>
-  
-<!--   Trabalhos section   -->
-    <div class="container">
+  <!--   Trabalhos section   -->
+  <div class="container">
       <div class="row">
-        <h5 class="header col s12 brown-text text-darken-1">De olho nas novidades! <div class="chip v-middle red white-text"><i class="tiny material-icons white-text v-middle">favorite</i><strong>NOVO</strong></div></h5>
-        <div class="divider"></div>
-       
+      <form action="#" method="GET">
+        <input id="campobusca" type="text" name="busca" placeholder="Insire a descrição aqui" class="validate col s5 m11">
+        <button type="submit" class="btn v-middle blue darken-4" ><i class="material-icons v-middle">search</i></button>
+      </form>
+      </div>
 
+  <div id="conteudotrabalhos">
+
+        <?php
+        if(isset($_GET['busca'])){
+
+        ?>
+
+
+
+
+        <?php
+        }
+        else{      
+        
+        ?>
+<!--   Trabalhos section   -->
+    <form action="#" method="GET">
+
+      <h5 class="header col s12 brown-text text-darken-1">De olho nas novidades! <div class="chip v-middle red white-text"><i class="tiny material-icons white-text v-middle">favorite</i><strong>NOVO</strong></div></h5>
+        </div>     
+  
         <div class="row">
         <?php
             include_once "../BO/trabalhoBO.php";
@@ -79,14 +101,22 @@
              }       
           ?>
         </div>
+
+
+<?php } ?>
+
+
+
+        </div>
+
         <div class="center">
           <a class="waves-effect waves-light btn buttonbox blue darken-4" href="../paginas/todostrabalhos.php"><i class="material-icons tiny v-middle">book</i>VER TODOS OS TRABALHOS</a>
         </div>
         <br>
-        <div class="divider"></div>
+      
         <div class="center">
         <br>
-        <i class="material-icons center grey-text text-lighten-4"> book </i><i class="material-icons center grey-text text-lighten-4"> search </i><i class="material-icons center grey-text text-lighten-4"> book </i><i class="material-icons center grey-text text-lighten-4"> search </i><i class="material-icons center grey-text text-lighten-4"> book </i><i class="material-icons center grey-text text-lighten-4"> search </i>
+       
         </div>
         <h5 class="center"> A persistência nos estudos realiza o impossível <br>- <strong>Prof. Leandro Piccini</strong></h5>
    

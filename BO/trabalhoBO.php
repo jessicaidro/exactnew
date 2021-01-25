@@ -43,4 +43,8 @@
 	function buscarTipoCategoriaBO($idcat) {
 		return buscarTipoCategoriaDAO($idcat);	
 	}
+
+	function contaVisitasBO($id_trabalho){
+		return contaVisitasDAO($id_trabalho);
+	}
 ?>

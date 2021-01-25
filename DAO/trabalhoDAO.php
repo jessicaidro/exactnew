@@ -88,7 +88,7 @@ tr inner join categoria ca on tr.id_categoria = ca.id_categoria order by tr.data
 		$conn = conectar();
 
 		try{
-			$buscarUser = 'select id_trabalho, id_user, titulo, id_categoria, diretorioArquivo, ano, descricao, tipo_arquivo, datatrabalho from trabalhos where id_user = '.$id_user.' order by datatrabalho desc';
+			$buscarUser = 'select tr.id_trabalho, tr.id_user, tr.titulo, tr.id_categoria, tr.diretorioArquivo, tr.ano, tr.descricao, tr.tipo_arquivo, tr.datatrabalho, c.id_trabalho, c.contador from trabalhos tr inner join contador c on tr.id_trabalho = c.id_trabalho where id_user ='.$id_user.' order by datatrabalho desc';
 			return $conn->query($buscarUser);
 		} catch(Exception $e) {
 			echo "Erro buscarTrabalhoUserDAO: ".$e->getMessage();
@@ -101,6 +101,7 @@ tr inner join categoria ca on tr.id_categoria = ca.id_categoria order by tr.data
 		try {
 		$editarTrabalho = "UPDATE trabalhos set titulo = '".$titulo."', id_categoria = ".$id_categoria.", diretorioArquivo = ".$diretorioArquivo.", ano = ".$ano.", descricao = '".$descricao."' , tipo_arquivo = '".$tipo_arquivo."' WHERE id_trabalho = ".$id_trabalho;
 		return $conn->exec($editarTrabalho);
+		
 
 		echo "<script> window.alert('Editado com Sucesso!'); </script>";
 
@@ -133,5 +134,46 @@ function buscarTipoCategoriaDAO($idcat) {
 		echo "Erro buscarTrabalhoUserDAO: ".$e->getMessage();
 	}
 }
+
+
+function contaVisitasDAO($id_trabalho){
+	global $conn;
+
+	try {
+
+		//busca para ver se existe contador para o trabalho
+		$buscar = "select id_contador, id_trabalho, contador from contador where id_trabalho = ".$id_trabalho;
+		$resultado =  $conn->query($buscar);
+		
+		if($resultado->rowCount() > 0){
+			//altera contador caso já exista
+
+			while($re = $resultado->fetch(PDO::FETCH_OBJ)){
+				$novocontador = $re->contador;
+				$contadorfinal = $novocontador+1;
+				$editarTrabalho = "UPDATE contador set contador = ".$contadorfinal." WHERE id_trabalho = ".$id_trabalho;
+
+				return $conn->exec($editarTrabalho);			
+			}
+		}
+		else{
+
+			//Insere contador caso ainda não exista
+			$numeroum = 1;
+			$cadastrar = $conn->prepare("INSERT INTO contador (id_trabalho, contador) VALUES (?,?)");
+			$cadastrar->bindParam(1, $id_trabalho);
+			$cadastrar->bindParam(2, $numeroum);
+			$cadastrar->execute();
+		}
+
+		
+	} catch (Exception $e){
+		echo "Erro cadastrarTrabalhoDAO: ".$e;
+	}
+
+
+}
+
+
 
 ?>
