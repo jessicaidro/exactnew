@@ -174,6 +174,18 @@ function contaVisitasDAO($id_trabalho){
 
 }
 
+function buscaTrabalhoDescricaoDAO($descricao) {
+	$conn = conectar();
+
+	try{
+		$buscaDescricao = "select t.id_trabalho, t.descricao, t.titulo, t.id_categoria, ca.NomeCategoria from trabalhos t INNER JOIN categoria ca on t.id_categoria = ca.id_categoria where t.descricao like '%".$descricao."%'";
+		return $conn->query($buscaDescricao);
+
+	} catch(Exception $e) {
+		echo "Erro buscaTrabalhoDescricaoDAO: ". $e->getMessage();
+	}
+}
+
 
 
 ?>

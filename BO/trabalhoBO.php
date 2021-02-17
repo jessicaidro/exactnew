@@ -47,4 +47,7 @@
 	function contaVisitasBO($id_trabalho){
 		return contaVisitasDAO($id_trabalho);
 	}
+	function buscaTrabalhoDescricaoBO($descricao) {
+		return buscaTrabalhoDescricaoDAO($descricao);
+	}
 ?>

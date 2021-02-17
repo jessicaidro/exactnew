@@ -12,6 +12,14 @@
 		return buscarUserDAO();
 	}
 
+	function buscarUserABO(){
+		return buscarUserADAO();
+	}
+
+	function buscarUserPBO(){
+		return buscarUserPDAO();
+	}
+
 	function buscarUserGETBO($id_user) {
 		//echo "<script> alert('".$id_user."'); </script>";
 		return buscarUserGETDAO($id_user);

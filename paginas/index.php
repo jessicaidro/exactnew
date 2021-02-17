@@ -55,19 +55,44 @@
       <div class="row">
       <form action="#" method="GET">
         <input id="campobusca" type="text" name="busca" placeholder="Insire a descrição aqui" class="validate col s5 m11">
-        <button type="submit" class="btn v-middle blue darken-4" ><i class="material-icons v-middle">search</i></button>
+        <form action="../Forms/formtrabalho.php" method="POST"> 
+          <button type="submit" class="btn v-middle blue darken-4" name="acao" value="busca"><i class="material-icons v-middle">search</i></button>
+        </form>
       </form>
       </div>
 
   <div id="conteudotrabalhos">
-
+  <div class="row">
         <?php
         if(isset($_GET['busca'])){
+          include_once "../BO/trabalhoBO.php";
+          $buscarDescricao = buscaTrabalhoDescricaoBO($_GET['busca']);
+            if($buscarDescricao->rowCount()>0){
+              while($r = $buscarDescricao->fetch(PDO::FETCH_OBJ)) {
+                echo '
+                <div class="col s12 m6 l3">
+                <div class="card cardbox medium hoverable ">
+                  <div class="card-content">
+                  <span class="badge blue darken-4 white-text buttonbox right-align">'.$r->NomeCategoria.'</span> <br>
+                    <h5 class="blue-text text-darken-1">'.$r->titulo.'</h5>
+                    <p class="black-text">'.$r->descricao.'</p> <br>
+                    <div class="card-action">
+                    <a class="waves-effect waves-light btn white blue-text text-darken-4 cardbox z-depth-0 semborder" href="../paginas/trabalhounico.php?id_trabalho='.$r->id_trabalho.'">Ver Trabalho <i class="material-icons v-middle tiny">chevron_right</i></a>
+          </div>
+        
+                  </div>
+                  </div>
+                </div>';
+              }
+            }
+            else{
+              echo '<div class="row"><h4 class="center"> <i class="material-icons medium v-middle">sentiment_very_dissatisfied</i> Nenhum resultado encontrado</h4> </div>';
+            }
+              
+            ?>
 
-        ?>
 
-
-
+</div>
 
         <?php
         }

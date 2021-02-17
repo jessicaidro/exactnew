@@ -53,12 +53,34 @@
 		$conn = conectar();
 
 		try {
-			$buscarUser = "SELECT id_user FROM where id_user ";
+			$buscarUser = "SELECT id_user FROM usuarios where id_user ";
 			return $conn->query($buscarUser);
 		} catch(Exception $e) {
 			echo "Erro buscarUserDAO: ". $e->getMessage();
 		}
 	}
+
+	function buscarUserADAO(){
+		$conn = conectar();
+
+		try {
+			$buscarUser = "SELECT * FROM usuarios where tipo_user = 'A'";
+			return $conn->query($buscarUser);
+		} catch(Exception $e) {
+			echo "Erro buscarUserDAO: ". $e->getMessage();
+		}
+	}
+	function buscarUserPDAO(){
+		$conn = conectar();
+
+		try {
+			$buscarUser = "SELECT * FROM usuarios where tipo_user = 'P'";
+			return $conn->query($buscarUser);
+		} catch(Exception $e) {
+			echo "Erro buscarUserDAO: ". $e->getMessage();
+		}
+	}
+
 
 	function buscarUserGETDAO($id_user) {
 		$conn = conectar();

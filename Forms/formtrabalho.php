@@ -154,4 +154,13 @@ if($_POST["acao"] == "CadastrarTrabalhoAluno") {
 		} 
   }
 
+
+  if($_POST["acao"] == "busca") {
+    $descricao = $_GET['descricao'];
+    
+    buscaTrabalhoDescricaoBO($descricao);
+
+    echo "<script> alert('$descricao'); </script>";
+  }
+
   ?>
