@@ -22,7 +22,7 @@
    <div class="row">
       <div class="col s3">
       <ul id="slide-out" class="sidenav sidenav-fixed  blue-grey">
-      <li><a href="../paginas/index.php" class="white-text"><i class="material-icons white-text">home</i><B>Ínicio</B></a></li>
+      <li><a href="../paginas/painelmaster.php" class="white-text"><i class="material-icons white-text">home</i><B>Ínicio</B></a></li>
               <li><a class="subheader white-text">Cadastros</a></li>
               <li><a class="white-text" href="../paginas/cadastroamaster.php"><i class="material-icons white-text">people</i>Aluno</a></li>
               <li><a class="white-text" href="../paginas/cadastropmaster.php"><i class="material-icons white-text">people</i>Professor</a></li>
